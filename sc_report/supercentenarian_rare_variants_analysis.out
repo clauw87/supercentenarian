@@ -1,0 +1,20 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Annotation}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{VEP annotation}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{ANNOVAR annotation}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{CSVS annotation}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{European rare variants, defining categories of interest}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{European rare variants}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Rare variants of interest}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{European rare variants with different AF in CSCV Healthy}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{Gene-level metrics: burden of rare variants of interest}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Functional Analysis of M116 rare variants}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Over Representation of Aging/Longevity \(previously described\) genes with potentially altering rare variants}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.2}{Over Representation of genes with association to supercentenarian phenotype in Gierman HJ et al. 2014gierman2014whole}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.3}{Overrepresentation of functional categories in genes with rare variants of interest}{section.4}% 14
+\BOOKMARK [1][-]{section.5}{Hypothesis-free analysis: in search for novel target genes}{}% 15
+\BOOKMARK [1][-]{section.6}{Remarkable findings}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Immune genes}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.2}{Bitter taste receptors}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.3}{Mitochondrial}{section.6}% 19
+\BOOKMARK [1][-]{section.7}{Conclusions}{}% 20
