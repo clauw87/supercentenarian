@@ -1,0 +1,1585 @@
+% !TEX TS-program = knitr
+\documentclass{article}\usepackage[]{graphicx}
+\usepackage[dvipsnames]{xcolor}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+
+% sections under subsubsections
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+% BIBTEX citations
+\usepackage{natbib}
+\bibliographystyle{unsrt}
+
+
+% sig images
+\usepackage{svg}
+
+
+% theorem like grey boxes
+\usepackage{ntheorem}   % for theorem-like environments
+\usepackage{mdframed}   % for framing
+
+
+% Tables
+\usepackage{fixltx2e}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{textgreek}
+\usepackage{booktabs}
+% tables
+\usepackage{xcolor}
+\usepackage{colortbl}
+%It sets your colour line and then sets back to default (black)
+\newcommand{\grayline}{\arrayrulecolor{black!20!mint}\hline\arrayrulecolor{black}}
+%Space table caption
+\usepackage{caption}
+\captionsetup[table]{skip=10pt}
+
+
+
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+
+
+
+\usepackage{alltt}
+% Knitr setup              
+\usepackage[english]{babel}
+
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\LARGE#1\end{center}
+    \vskip0.5em}%
+}
+
+
+% Images
+\usepackage{colortbl}
+\usepackage{fixltx2e}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{textgreek}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{epstopdf} %%package to overcome problem with eps in pdf files
+\graphicspath{ {./images/} }
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{float}  % If comment this, figure moves 
+\usepackage{textpos}
+\usepackage{calc}
+
+
+
+% ennumerate 
+\usepackage{enumitem}
+
+
+
+
+\usepackage{parskip}% no indent
+
+\usepackage[export]{adjustbox} % figures place
+
+\usepackage[section]{placeins}% keep stuff in place
+
+
+
+
+
+
+% SETTINGS
+
+%Colors
+\definecolor{graphite}{HTML}{454254}
+\definecolor{earthblue}{HTML}{0000A5}
+\definecolor{brightblue}{HTML}{0909FF}
+\definecolor{vino}{HTML}{581845}
+\definecolor{greenishblue}{HTML}{307D7E}
+\definecolor{mint}{HTML}{BFE5D9}
+
+
+
+\usepackage{hyperref}
+
+%hyperref setup
+\hypersetup{
+    colorlinks=true,
+    allcolors={black!20!mint},
+    linkbordercolor = {white},
+    linkcolor={black!20!mint},  % {graphite},%,  {black!50!white}
+    filecolor=magenta,      
+    urlcolor=magenta,%greenishblue, %brightblue, %cyan,
+    pdfpagemode=FullScreen
+    }
+    
+    
+%\hypersetup{frenchlinks=true} % small cap name of sections
+% \hypersetup{hidelinks} % no color no nothing
+
+
+
+
+% text box
+\usepackage{blindtext}
+\usepackage{tcolorbox}
+
+
+% Theorem like gray boxes
+\usepackage{ntheorem}   % for theorem-like environments
+\usepackage{mdframed}   % for framing
+
+\theoremstyle{break}
+\theoremheaderfont{\bfseries}
+\newmdtheoremenv[%
+%linecolor=gray,leftmargin=60,%original setting nice 
+linecolor=red!40,%
+%rightmargin=40,%original setting nice 
+backgroundcolor=red!15,%
+innertopmargin=0pt,%
+ntheorem]{myprop}{Note} % original option{Proposition}[section]
+
+
+
+
+
+
+\setlength{\topmargin}{0in}
+
+
+
+
+
+
+
+
+%header
+\usepackage{fancyhdr}
+
+%\pagestyle{fancy}
+\fancyhf{}
+%\lhead{REST API Reference (v12.011918)}
+%\rhead{\thepage}
+%\cfoot{Company, Inc.}
+
+%header first pge
+\fancypagestyle{firststyle}
+{
+    \fancyhead[L]{\color{graphite} Rare variants analysis}    
+    %\fancyhead[R]{\color{graphite} \href{mailto:claudia.vasallo@upf.edu}{claudia.vasallo@upf.edu}}
+    \fancyhead[R]{\color{graphite} Supercentenarian project}
+    %\fancyhead[R]{ \includegraphics[width=4cm]{logo.png}}
+    \renewcommand{\headrulewidth}{2pt}% 2pt header rule
+    \renewcommand{\headrule}{\hbox to\headwidth{%
+    \color{graphite}\leaders\hrule height \headrulewidth\hfill}}
+}
+
+% header other pages - header is section- subsection
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{\nouppercase\leftmark} 
+%\fancyhead[R]{\nouppercase\rightmark}
+
+
+
+
+
+
+
+
+
+
+
+
+% TITLE
+\title{\textbf{Analysis of rare genomic variants of a Catalonian Supercentenarian.}}
+\author{Claudia Vasallo \\ \href{mailto:claudia.vasallo@upf.edu}{claudia.vasallo@upf.edu} }
+\date{}
+
+
+
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+
+
+\begin{document}
+
+
+    \maketitle
+    
+    
+ \tableofcontents
+ 
+\thispagestyle{firststyle}
+
+
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+
+\section{Summary}
+\label{sec:summary}
+
+
+WGS rare variants of the Olot supercentenarian were analysed for potential hints on genes or biologically relevant gene sets underlying her extreme longevity phenotype. By the nature of rare variant analyses, and with the limitations imposed by the availability of one single case and no internal controls, the analyses leveraged on previous knowledge such as predictions of variants functional relevance, known longevity/aging or disease genetic associations and functional annotations of genes available in public databases, and on comparing relative gene-level metrics with those of external controls. No differential global pattern was found for the genomic distribution of rare variants in known longevity or disease genes according to their predicted functional effect, but individual functional processes and individual genes were highlighted by the differential burden of functional rare variants. Most supported such processes and genes highlight Immune System functions, and are in general in line with processes with previously reported evidence or  suggestive evidence of association with extreme-longevity. Interesting findings are discussed in the context of known longevity-associated mechanisms.
+
+%and Taste Receptor Activity, 
+
+% the differential genomic location or 
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+
+% INTRODUCTION
+\section{Introduction}
+\label{sec:intro}
+
+
+Longevity or healthy aging and \texttt{extreme longevity} in particular are rare complex phenotypes with a genetic component \cite{smulders2024genetics}, most likely comprised of a complex interaction of many common and rare genetic variants with individually modest but collectively great effects \cite{sebastiani2012genetics}\cite{smulders2024genetics}. Some studies have pointed out that extremely long-lived subjects do not have a lack of known individual risk-increasing variants or a lower polygenic risk for certain diseases \cite{beekman2010genome}\cite{sebastiani2012genetics}\cite{nygaard2019whole}, eliciting the theory that exceptional longevity does not necessarily imply the absence of risk factors for major age-related traits and highlighting the interesting possibility of genetic variants contributing in concert to healthy aging \cite{sebastiani2012whole}\cite{smulders2024genetics}\cite{dato2019untangling}.
+
+Given the double trouble of the pair rare variants - rare phenotype, rare variants are very difficult to study in population-wide association studies and are typically studied using aggregated or collapsed approaches that jointly characterise the effect of a ``functional" group of variants in a target genomic region, most naturally a gene or functional gene set such as a biological pathway. These burden tests that aim to identify genes with an increased burden of rare variants assume that the accumulation of certain rare variants influence the phenotype and thus rely heavily on the definition of the ``functional" variants that are to be tested, which is generally addressed (fallibly) through the estimation of their potential effects on protein function/behaviour by different methods of ``pathogenicity" estimating algorithms and the available experimental knowledge. 
+
+With this, ``rare variants hypothesis" of extreme longevity \cite{sebastiani2012genetics} is a promising active field \cite{smulders2024genetics} and some studies exploring the burden of rare variants in association with extreme longevity have proved useful and have pointed to certain genes and corroborated previously discovered ones \cite{gierman2014whole} \cite{druley2016candidate}\cite{smulders2024genetics}.
+
+In the present work we aim to study rare genetic variants in the genome of the Olot supercentenarian \autoref{sec:data}(hereafter referred to as M116 by the sample's label) with the goal of identifying, characterising (\autoref{sec:vardef}), functionally analysing (\autoref{sec:fun}) and testing the local burden of ``functional" rare variants in M116's genome in order to get hints at the potential role of genes and gene sets in her extreme longevity phenotype.
+
+Because of the difficulties of reaching any valid conclusion from just 1 case, and without available internal controls, M116's gene and gene-set level metrics \autoref{sec:metrics} were compared with those of a control set of external controls of similar demographic background \autoref{sec:data} in an attempt to assess the ``extremeness" of M116 genome and identifying ``extreme" genes or gene sets potentially linked to the extreme phenotype (hypothesis free analysis, \autoref{sec:free}).
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+% DATA
+\section{Data}
+\label{sec:data}
+
+Single nucleotide variants (SNVs, around 3.8 M) were obtained from whole-genome sequencing (WGS, average depth of coverage around 26X) of three Olot individuals of interest, including the supercentenarian (M116, 3 samples: blood, saliva and urine), and two of her daughters (R79 and T90, one sample each: blood and saliva, respectively) and were handed out by Manel. In the current study the focus was on the three M116 samples, although certain verifications can further be done with the daughter's samples.
+
+The variants obtained are all PASS with QUAL $>$ 20 according to previous QC performed in the genomics facility (detailed in the report from Eloy). Briefly, hard filter was apply: Quality filter ``QD < 2.0 || FS $>$ 60.0 || MQ $<$ 40.0 || HaplotypeScore $>$ 13.0 || MappingQualityRankSum $<$ -12.5 || ReadPosRankSum $<$ -8.0". No further QC or filter was performed from our side aside from filtering to variants present in at least 2 out of the 3 samples.
+
+A ``control set" of seventy-six women from the Iberian populations in Spain (IBS) Population in Phase 3 1000G high coverage (30X) WGS SNV data (QUAL $>$ 20 and FILTER is PASS) \cite{byrska2022high} was considered (hereafter abbreviated 1000G IBS). 
+
+The above hard filter was applied to the 1000G data to be consistent with M116 data. %(previously QCed by recalibration) 
+
+From here one, the Variant Call Format files (VCFs) from the Olot samples and the 1000G IBS controls were then processed and analysed in the same way throughout the work.
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+% ANNOTATION
+\section{Annotation}
+\label{sec:annot}
+
+VCFs were annotated with the annotation sources below, then converted to tables with VariantsToTable function from GATK \cite{mckenna2010genome}.
+
+
+\subsection{VEP annotation}
+\label{sec:annotvep}
+
+The VCFs were annotated with Ensembl Variant Effect Predictor (VEP) \cite{mclaren2016ensembl} version 111. 
+
+The annotations added included variant attributes such as transcript location, class, and other attributes; AF of existing variants in different populations and datasets including: 1000G\cite{byrska2022high} NFE (Phase 3 (remapped), gnomAD \cite{koch2020exploring} EUR genomes (r3.1.2, genomes only), gnomAD EUR exomes (r2.1.1, exomes only); functional variant effect annotations: Ensembl IMPACT and Consequence annotations, prediction scores from Polyphen (2.2.3) \cite{adzhubei2010method}\cite{adzhubei2013predicting} , SIFT (6.2.1)\cite{ng2003sift}  and genome-wide variant deleteriousness rankings from the CADD algorithm - CADD scores\cite{rentzsch2019cadd} (CADD v1.7; VEP 111 CADD Plugin), and clinical significance from ClinVar (2023-10).
+
+While SIFT and PolyPhen-2 give predictions of functional effect for variants that are predicted to result in an amino acid substitution, Combined Annotation Dependent Depletion (CADD) tool scores the predicted deleteriousness of both coding and non-coding variants by integrating multiple annotations including conservation and functional information into one metric and allow to classify also non-coding variants.
+
+The annotation also adds SNP identifier annotations dbSNP (156) for existing variants, and gene/features identifiers such as ENSG IDs (v102), which are versioned and reliable for integrating different sources for analyses, as well as HGNC symbols, useful for reporting.
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+ % VARIANTS OF INTEREST
+ 
+\section{Variants of interest (VOI)}
+\label{sec:vardef}
+
+The VEP annotations for AF in Europeans from (1000G and Gnomad exome) and the fields IMPACT, Consequence, Polyphen and SIFT  and CADD were used to identify \textbf{rare variants} and classify them into different categories of interest for further analysis (\autoref{sec:fun}).
+
+
+\subsection{Rare variants}
+\label{sec:rare}
+
+Rare variants in Europeans, hereafter rare variants, were defined as variants with no instance of AF $>$ 0.015 in the datasets i) 1000G 30X Illumina NovaSeq sequencing of 2504 unrelated individuals and ii) gnomad v4.1 genomes. 
+
+Additionally,  only variants called from at least 2 of the 3 M116's samples were considered, and are the ones referred to in the analyses in \autoref{sec:fun}. Likewise, the replication in 1 or 2 of the daughters' samples was registered for possible further filters.
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+
+\FloatBarrier
+\subsection{Categories of variants' impact: Variants of Interest (VOI)}
+\label{sec:rareinteresting}
+
+
+The rare variants identified in M116 (\autoref{sec:rare}) were classified into 7 categories attending to their potential impact on protein function or otherwise impact prediction based on consequence annotations in \autoref{sec:annot}, namely, \href{https://www.ensembl.org/info/genome/variation/prediction/predicted_data.html}{Ensembl Variation - Calculated variant consequences}, Polyphen \cite{adzhubei2010method}\cite{adzhubei2013predicting}, SIFT \cite{ng2003sift} and CADD \cite{rentzsch2019cadd}. 
+
+
+The categories the include homogenous categories (\textsc{damaging}, \textsc{moderate}, \textsc{modifier\_cd}   \textsc{modifier\_nc}, and  \textsc{ncnc\_cadd15}, were the impact is expected to be more uniform in direction, while the category \textsc{altering} is a broad and less homogenous category of VOI affecting coding genes that contains al the categories affecting coding genes, and \textsc{cadd15} is an even broader less homogenous category including all of the others, i.e, categories affecting coding and non-coding genes, that is solely based on CADD PHRED score.
+
+
+\begin{itemize}
+%\item ALL: all rare variants without filtering
+%\item CODING: BIOTYPE is coding, this is variant affects any part in a coding transcript of a coding gene
+\item \textsc{damaging}: BIOTYPE is coding, IMPACT is HIGH (disruptive variants probably causing truncation, loss of function or triggering nonsense mediated decay) and Polyphen/SIFT predictions are damaging/deleterious and CADD $>$ 15
+\item \textsc{moderate}: BIOTYPE is coding, IMPACT is MODERATE (a non-disruptive variant that might change protein effectiveness) and CADD $>$ 15
+\item \textsc{modifier\_cd}: BIOTYPE is coding, IMPACT is MODIFIER (usually non-coding variants or variants affecting non-coding genes where predictions are difficult or there is no evidence of impact) and CADD $>$ 15
+\item \textsc{modifier\_nc}: BIOTYPE is not coding, gene is coding, IMPACT is MODIFIER (usually non-coding variants or variants affecting non-coding genes where predictions are difficult or there is no evidence of impact) and CADD $>$ 15
+\item \textsc{altering}: any of the first three, this is, impactful variants in coding genes, either in coding transcripts or not
+\item \textsc{ncnc\_cadd15}: BIOTYPE is not coding, not coding gene and CADD $>$ 15, this is, impactful variants in non-coding genes  
+\item \textsc{cadd15}: CADD $>$ 15, and so includes ALTERING and NCNC\_CADD15
+%\item LOW: BIOTYPE is coding, IMPACT is LOW
+\end{itemize}
+
+
+Genes harbouring variants in any of these categories were accordingly annotated on these categories for gene-level analyses. Of, note, gene categories are not exclusive so the genes can be in more than one VOI category.
+
+
+The table \autoref{table:varofint} shows the number of autosomal variants and genes associated, in all rare variants, in rare variants in coding genes and per VOI category, and their distribution in autosomal, sex and mitochondrial chromosomes.
+
+% VARIANTS OF INTEREST - GENES WITH VOI
+\begin{table}[ht]
+\centering
+ \caption{Rare variants and variants of interest (VOI) and affected genes - distribution}
+%\begin{tabular}{|p{2cm}p{2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}|}
+\begin{tabular}{p{2cm}p{2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}p{1.5cm}}
+
+  \hline
+                & \multicolumn{2}{c}{Autosomal} &  \multicolumn{2}{c}{Sex} &  \multicolumn{2}{c}{Mitochondrial }  \\ 
+Category & Variants &  Genes &  Variants &  Genes & Variants &  Genes \\  [0.5ex] 
+
+   \hline\hline
+  		 all			 &  87547 & 24316 	&   4108 & 798.    & 11 &  32 \\ 
+ 		 coding 		& 41736 & 10769		& 11292 & 384 &  11 &  11 \\ 
+      \grayline
+   \textsc{damaging} 		&  227 & 220		 &   2 &   2 		&   0 &   0 \\ 
+   \textsc{moderate} 		& 369 & 342		 &  3 &    3 		&   0 &   0 \\ 
+   \textsc{modifier\_cd}	 &1956 & 917   	&  14 &  13 		&   0 &   0 \\ 
+   \textsc{modifier\_nc} 	& 807 & 750		&  10 &  11 		&   0 &   0 \\ 
+   \textsc{altering} 		& 1174 & 1138 	&  15 &  15 		&   0 &   0 \\ 
+   \textsc{ncnc\_cadd15} 	&  575 & 666         &  5 &  5                 & 0 &   0 \\ 
+   \textsc{cadd15} 		& 448 & 1804		 &  18 &  20 		&   0 &   0 \\ [1ex]   
+   \hline
+\end{tabular}
+\label{table:varofint} 
+\end{table}
+
+
+Only autosomal chromosomes are available for the control set. For reference, the tables \autoref{table:m116voiauto} and \autoref{table:ibsvoi} show the counts of autosomal variants and genes in M116 and the mean counts in 10000G controls per VOI category. 
+
+
+%However, it is not a significant outlier for any category in the compound dataset.
+%The \textit{observed} number variants and genes in the categories do not statistically differ from the \textit{expected} (mean) (Fisher exact test p-value $>$ 0.05)
+
+
+\begin{table}[ht]
+\centering
+ \caption{Number of autosomal rare variants and variants of interest (VOI) and affected genes in M116}
+%\begin{tabular}{lrrrl}
+ % \begin{tabular}{|p{2cm}p{3cm}p{3cm}|}
+  \begin{tabular}{p{2cm}p{3cm}p{3cm}}
+  \hline
+Category & Variants & Genes \\  [0.5ex]  
+  \hline\hline
+all & 87547 & 24316 \\ 
+coding & 41736 & 10769 \\ 
+     \grayline
+    \textsc{damaging} & 227 & 220 \\ 
+    \textsc{moderate} & 369 & 342 \\
+    \textsc{modifier\_cd} & 956 & 917 \\
+    \textsc{modifier}\_nc & 807 & 750 \\ 
+    \textsc{altering} & 1174 & 1138 \\
+    \textsc{ncnc\_cadd15} & 575 & 666 \\ 
+    \textsc{cadd15} & 1448 & 1804	 \\ [1ex] 
+   \hline
+\end{tabular}
+\label{table:m116voiauto}
+\end{table}
+
+
+
+\begin{table}[ht]
+\centering
+ \caption{Mean and SD of the number of autosomal rare variants and variants of interest (VOI) and affected genes in 1000G IBS}
+ \begin{tabular}{p{2cm}p{4cm}p{4cm}}
+  \hline
+ Category & Variants Mean (SD) & Genes Mean (SD) \\ [0.5ex] 
+  \hline\hline
+all &  81448.76 (10448.76) & 22406.97 (1003.92) \\ 
+  coding & 38735.69 (5084.47) & 10106.77 (374.12) \\
+    \grayline
+  \textsc{damaging} & 180.48 (24.09) & 176.48 (23.47) \\ 
+  \textsc{moderate} & 285.56 (34.46) & 276.07 (32.69) \\ 
+  \textsc{modifier\_cd} & 824.49  (93.58) & 776.72 (73.97) \\ 
+  \textsc{modifier\_nc} & 677.91 (75.99) & 634.04 (64.22) \\ 
+ \textsc{altering} & 996.97 110.75) & 962.77 (92.76) \\ 
+  \textsc{ncnc\_cadd15} &  514.76 (62.05) & 589.21 (68.50) \\ 
+  \textsc{cadd15} & 1267.08  (141.94) & 1551.99 (155.14) \\  [1ex] 
+   \hline
+\end{tabular}
+\label{table:ibsvoi}
+\end{table}
+
+
+
+
+
+
+\begin{figure}[h]
+\centering
+        \includegraphics[totalheight=10cm]{countsboxplot}
+   \caption{Number of rare variants and affected genes (all rare, in coding genes, in VOI categories ), in M116 and controls}
+    \label{fig:countsboxplot}
+\end{figure}
+
+
+
+
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+
+\FloatBarrier
+\section{VOI in homozygosity}
+
+The presence of rare homozygous variants (RHV) among the VOI was investigated in M116.  
+
+Variants that appeared in at least two or the 3 M116's samples considered until now, were further screened for being called homozygous in at least one the two samples.
+% and being called heterozygous in at least one daughter.
+%Further, being present in homosigosity in both of them and been present in heterozygosity (and not in homozygosity) in at least one daughter.
+%A total of 11 homozygous VOI were found: 4 in chromosome 6, 2 in chromosome 5,  2 in chromosome 2, 1 in chromosome 3, one in chromosome 11 and one in chromosome 16.
+
+A total of 7 homozygous VOI were found: 2 in chromosome 6, 2 in chromosome 5,  1 in chromosome 2, 1 in chromosome 3,  and 1 in chromosome 11.
+
+%Out of the 11homozygous VOI,  8 belong to the \textsc{altering} category, i.e, affecting protein-coding coding genes (in either a coding or non-coding transcripts) (\autoref{sec:cd}, \autoref{table:homonc}),  and 5 in the \textsc{ncnc\_cadd15} category, this is, affecting non coding genes (\autoref{sec:cd}, \autoref{table:homonc}), while 2 belong to the two categories, affecting at least one coding and one non-coding gene.
+
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+\FloatBarrier
+\subsection{Homozygous VOI in Protein-coding Genes -  \textsc{altering}}
+\label{sec:cd}
+
+In total M116's genome harbours 7  \textsc{altering} variants in homozygosity, affecting 19 genes or pseudogenes (with a given Ensemble Gene ID).
+
+%Out of the 8  there are 3 \textsc{damaging} (missense) variants in chromosome 6, 
+
+%1  \textsc{moderate} (missense) \textsc{modifier\_cd} (intron\_variant) and 1 \textsc{moderate} (missense) in chromosome 5, 
+
+%1 \textsc{modifier\_cd} in chr 11.
+
+ Table \autoref{table:homocd} shows the homozygous VOI and affected genes.
+
+% -------------------- TABLE   -------------------- % 
+\begin{table}[h!]
+\centering
+ \caption{Homozygous variants of interest (VOI)  \textsc{altering}}
+ \begin{tabular}{p{3.2cm} p{4.0cm} p{2.0cm} p{4.0cm} p{2.5cm}} 
+ \hline
+Variant  &   rsid &  VOI category & Type  & Gene(s) \\  [0.5ex] 
+ \hline\hline
+ 
+ %  chr6\_32518555\_C\_G (as splice\_donor\_variant) and chr6\_32519649\_C\_A (as stop\_gained\&splice\_region\_variant).
+ 
+%chr6\_32518555\_C\_G  & rs201788268     & \textsc{damaging}  &  splice donor variant & HLA-DRB5 \\    % only one supported by genomad prediction
+% &	&	&															HLA-DRB3  \\ % pLoF High-confidence, no reported homozygous ---- said by dbSNP but not our annotation
+% \hline
+ 
+%chr6\_32519649\_C\_A  &  rs1071751      & \textsc{damaging}     &    stop\_gained-splice\_region\_variant  & HLA-DRB5  \\ % ddd  % COSV66614715
+% 				     &		         	& \textsc{damaging}    &	missense\_variant		&   HLA-DRB3 \\
+ %\hline
+ 
+chr6\_116253208\_C\_T &  rs199879512  & \textsc{modifier\_cd} & upstream\_gene\_variant &   DSE    \\
+                                                                  &   & \textsc{modifier\_cd}  & downstream\_gene\_variant   &    NT5DC1   \\
+                                                                   &   & \textsc{moderate} & missense\_variant  &   TSPYL4    \\
+ \hline
+
+
+%chr5\_140850017\_G\_A & 436 & intron\_variant (\textsc{modifier\_cd}) and missense\_variant (\textsc{moderate})  & PCDHA 1 to 8  (intron\_variant ) , PCDHA9 (missense\_variant )\\
+
+chr5\_140850017\_G\_A* & rs149779533 & \textsc{modifier\_cd} & intron\_variant & PCDHA 1 to 8   \\
+                                                                & &   \textsc{moderate} &  missense\_variant   &    PCDHA9 \\
+ \hline
+ 
+
+chr5\_61332829\_C\_T*   & rs776194131  & \textsc{moderate} & missense\_variant  &  ZSWIM6 \\ 
+ \hline
+ 
+ 
+ chr11\_117597177\_A\_C   & rs117215487 & \textsc{modifier\_cd} & intron\_variant &  DSCAML1	\\ % ENSG00000177103
+  \hline
+  
+ chr2\_39312307\_C\_T   &  rs184591880  &  \textsc{modifier\_nc}  &  intron\_variant-non\_coding\_transcript\_variant  & MAP4K3 \\
+&&  \textsc{modifier\_nc}  &  intron\_variant-non\_coding\_transcript\_variant & MAP4K3 \\
+ 
+   \hline
+ chr3\_62414973\_G\_A  & rs189389409  & \textsc{modifierc\_cd} & intron\_variant  & CADPS	\\
+ &&  \textsc{modifier\_nc} & intron\_variant-non\_coding\_transcript\_variant     & CADPS	\\ [1ex] 
+   \hline
+   
+ \end{tabular}
+\label{table:homocd}
+\end{table}
+% ---------------------------------------- % 
+
+
+
+%Interestingly, HLA-DRB5 (ENSG00000198502) is affected by 2 closeby rare homozygous VOI of \textsc{damaging} \autoref{table:homocd}. 
+
+%\begin{myprop}
+%Of note, the gene has a total of 50 rare homozygous variants in total out of 200 total rare variants, close to the overall homozygosity rate for this gene of 31.0\%. 200 rare variants is high number compared to what is found for this gene in controls. Jointly in all controls, 143 rare variants were found in this gene  (30 homozygous, 61 heterozygous). I don't know if his might be a matter of QC performed in this region by 1000G (?), because counts discrepancies that big do not show in other genes, or she really has a big difference there (and the daughters as well, somehow).
+%\end{myprop}
+%- chr6\_32518555\_C\_G with an AF in EUR in our annotations of 0, has discrepant AF in EUR in databases: Gnomad webpage genomes exomes+genomes (0.01173), Gnomad webpage 1000G European (G=0.04286), dbSNP web (dbSNPv151) ALPHA (sample size 2816,  G=0.0600) in dbSNP web (dbSNPv151) 1000G genomes 30X EUR (sample size 1266, G=0.1264). Discrepant frequency warning is given in Gnomad (Cochran–Mantel–Haenszel test p-value 5.7e-248), indicative of a low-quality site.
+ %While it might not be overall too rare, no homozygous has been reported in gnomAD v4.1.0 (though a warning is given that the variant is covered in fewer than 50\% of individuals in both gnomAD v4.1.0 exomes and genomes, which might be indicative of a low-quality site and in turn imply more homozygous) According to the annotation of consequence in dbSNP chr6\_32518555\_C\_G also affects HLA-DRB3 as Splice Donor Variant, although this was not annotated by our annotation source.
+
+
+%Interestingly, ENSG00000204961 (PCDHA9) is affected by one rare homozygous missense variant (chr5\_140850017\_G\_A), which also affects the antisense non-coding gene \autoref{sec:nc}.
+
+
+%chr11	117597177 ENSG00000177103 But the variant is homozygous in jus 1 sample (urine, with the lowest quality: 153.14, although well above 20).
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+\FloatBarrier
+\subsection{Homozygous VOI in Non-coding Genes - \textsc{ncnc\_cadd15}}
+\label{sec:nc}
+
+
+
+In total 3 non-coding genes' homozygous VOI were found, affecting 3 non-coding genes \autoref{table:homonc}
+.
+
+
+
+% -------------------- TABLE   -------------------- % 
+\begin{table}[h!]
+\centering
+ \caption{Homozygous variants of interest (VOI) \textsc{ncnc\_cadd15} }
+ \begin{tabular}{p{3.2cm} p{2.0cm} p{5.5cm} p{4cm}} 
+ \hline
+Variant  &   rsid &   Type  & Gene(s) \\  [0.5ex] 
+ \hline\hline
+ 
+%chr16\_56171155\_C\_A    & rs111346687  & intron\_variant-non\_coding\_transcript\_variant &  GNAO1-DT \\ 
+ %\hline
+%chr2\_87719849\_G\_A  & rs539163992  & non\_coding\_transcript\_exon\_variant  & ANAPC1P4	\\       %.   ENSG00000234231 transcribed_unprocessed_pseudogene
+%&& non\_coding\_transcript\_exon\_variant  &  NCAL1 \\   %NCAL1 seen by genomad web 
+%\hline
+
+chr5\_140850017\_G\_A*  & rs149779533  & upstream\_gene\_variant & Novel Transcript, Antisense To PCDHA9\\      %  ENSG00000278907
+\hline
+
+chr5\_61332829\_C\_T*  & rs776194131  & upstream\_gene\_variant & Novel Transcript\\      % ENSG00000288936
+ &&  intron\_variant      &  LOC105378994	\\ 
+  \hline
+  
+chr6\_98133809\_T\_G  & rs189389409    & non\_coding\_transcript\_exon\_variant  & LOC101927314\\     %Uncharacterized  ENSG00000271860
+&&   downstream\_gene\_variant  & \\ [1ex] 
+\hline
+
+ \end{tabular}
+\label{table:homonc}
+\end{table}
+
+% ---------------------------------------- % 
+
+The homozygous VOI were contrasted with gnomad v4 genomes data and no homozygous is reported there for any of the 7 variants in female European (NFE XX).
+
+
+
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%--------------------------------------------------------------------------------------------------------------------------------------
+\FloatBarrier
+\section{Functional Analysis of genes with VOI}
+\label{sec:fun}
+
+
+Assuming that a fraction of the the selected functional rare variants (VOI) in M116 \autoref{sec:rareinteresting} contribute a functional effect on the phenotype through the impact on the function of genes and gene sets harbouring VOI, we set to functionally characterise genes harbouring VOI attending to the representation of genes of known functions, in order to get insights on possible mechanisms affected by rare variants in M116, that might contribute to her extreme longevity phenotype.
+
+The functional gene sets analysed included i) curated lists of longevity/aging genes, ii) a list of top differentiating genes in a study of a European supercentenarian cohort \autoref{sec:funAge}, and iii) a list of disease-associated genes from GWAS Catalog \autoref{sec:funGWAS}, that address popular hypotheses of extreme longevity involving longevity and disease genes, as well as iv) all functional gene sets from a set of annotation databases, as a hypothesis-free approach \autoref{sec:funDB}.
+
+
+To harmonise gene names and integrate the different sources, BioMartR R package \cite{drost2017biomartr} was used with Ensemble v102 annotations, to match the ENSG IDs in our VEP annotated VCFs.
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%\begin{itemize}
+\FloatBarrier
+\paragraph{Longevity representatives genes}
+\label{sec:theimportant}
+%\end{itemize}
+
+
+Beyond the enrichment in the number of affected longevity genes, the identity and the combination of affected longevity genes is worth noting for future analysis in search of specific causal variants \cite{smulders2024genetics}.
+
+%So, although the enrichment in the gene set was not significant in any test (P Fisher's Exact Test = 0.065),  8 of the RVT1 burden test top differentiating genes in European supercentenarian \cite{gierman2014whole} harbour \textsc{altering} variants in M116.
+
+
+In this sense, the lists of overlapping genes from the tables above were generated in order to contrast them with the ``differentiating genes" \autoref{sec:free} and for future inspection of variant-level, for comparison with reported variants.
+
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+\FloatBarrier
+\subsection{Over Representation Analysis of Aging/ Longevity/ Extreme longevity genes in genes with VOI}
+\label{sec:funAge}
+
+Seven partially overlapping longevity/aging gene sets suggested by Manel were included as representative of longevity/aging associated genes to be analysed individually and polled (all longevity). Additionally, the top list of genes in a MZ test burden test (RVT1) (uncorrected p-value RVT1 p-value$<$ 1E-02) in a cohort of 13 European supercentenarian \textit{vs} 34 PGP Europeans (controls) \cite{gierman2014whole} was considered, as potentially associated specifically with the `extreme longevity" phenotype.
+
+
+\begin{itemize}
+\item Manel excel (email attached) - excel (74 genes)
+\item GenAge (human) - hagr\_genage\_human (339 genes) 
+\item GenAge complementary dataset Genes Commonly Altered During Ageing (from a microarray meta-analysis study) - hagr\_genage\_ageing (683 genes) 
+\item CellAge: The Database of Cell Senescence Genes - hagr\_cellage (952 genes) 
+\item CellAge: The Database of Cell Senescence Genes - hagr\_cellsignatures (1368 genes) 
+\item Longevity Variants Database (LongevityMap), a database of human genetic variants associated with longevity - longevitymap (996 genes) 
+\item NGDC Aging Atlas Aging-related genes (human) - ngdc (554 genes) 
+\item RVT1 burden test top genes in supercentenarian cohort - sc17 \cite{gierman2014whole}  (49 genes)
+\end{itemize}
+* downloaded from \href{https://genomics.senescence.info/}{Human Ageing Genomic Resources} and \href{https://ngdc.cncb.ac.cn/aging/age_related_genes}{https://ngdc.cncb.ac.cn/aging/index} on Mar 15 2024
+
+
+
+
+\FloatBarrier
+\paragraph{Number of hit longevity genes}
+\label{sec:extra}
+
+
+If VOI variants contribute to the phenotype through their impact on ``known” longevity-associated genes and gene sets, the number of longevity genes affected by such functional rare variants could be hypothesised to be greater in M116 than in other individuals of the population. 
+
+To asses this, we observed the counts and proportions of VOI in M116 in comparison with the control distribution.
+
+Tables \autoref{table:overlapall} and \autoref{table:overlapsc17} show the number of overlapping genes in M116 and the mean number in 1000G IBS controls, for the pooled gene set of all unique known longevity genes and for the sc17 geneset, in control categories of all genes harbouring rare variants, in coding genes harbouring rare variants and in the VOI category genes.
+
+As exemplified in \label{table:overlapall}, generally, M116 value is not too far from the mean value of 1000G IBS controls.
+
+
+\begin{table}[ht]
+\centering
+\caption{Number longevity-associated genes (all\_longevity) per VOI category in M116 and mean number in 1000G IBS controls}
+\begin{tabular}{rlr}
+  \hline
+ & 1000GIBS mean (sd) & M116 \\ 
+  \hline\hline
+all & 1933.5 (70.21) & 2072 \\ 
+  coding & 1877.2 (69.44) & 2016 \\ 
+  \grayline
+  \textsc{damaging} & 28.8 (6.56) &  38 \\ 
+  \textsc{moderate} & 47.8 (8.33) &  65 \\ 
+  \textsc{modifier\_cd} & 167.9 (16.73) & 184 \\ 
+  \textsc{modifier\_nc} & 139.1 (16.02) & 159 \\ 
+  \textsc{altering} & 196.8 (20.51) & 223 \\ 
+  \textsc{ncnc\_cadd15} & 4.4 (2.17) &   5 \\ 
+  \textsc{cadd15} & 201.2 (20.66) & 228 \\ 
+   \hline
+\end{tabular}
+ \label{table:overlapall}
+\end{table}
+
+
+
+\begin{table}[ht]
+\centering
+\caption{Number longevity-associated genes (sc17) per VOI category in M116 and mean number in 1000G IBS controls}
+\begin{tabular}{rlr}
+  \hline
+ & 1000GIBS mean (sd) & M116 \\ 
+  \hline\hline
+  all & 32.6 (2.5) &  36 \\ 
+  coding & 32.4 (2.57) &  36 \\ 
+  \grayline
+  \textsc{damaging} & 0.8 (0.96) &   1 \\ 
+  \textsc{moderate} & 1.5 (1.16) &   2 \\ 
+  \textsc{modifier\_cd} & 3.5 (1.84) &   6 \\ 
+  \textsc{modifier\_nc} & 3 (1.59) &   7 \\ 
+  \textsc{altering} & 4.4 (1.9) &   8 \\ 
+  \textsc{ncnc\_cadd15} & 0 (0.16) &   0 \\ 
+  \textsc{cadd15} & 4.5 (1.91) &   8 \\ 
+   \hline
+   \hline
+\end{tabular}
+ \label{table:overlapsc17}
+\end{table}
+
+
+However, with a single ``case" we are limited in any statistical conclusion. In addition, the use of external controls that might systematically differ from our sample (batch effect) may introduce a bias so the total counts are not directly comparable. 
+
+
+% ----------------------------------------
+
+
+%\begin{itemize}
+%\item 
+\FloatBarrier
+\paragraph{Longevity enrichment - or bias towards longevity variation}
+\label{sec:gs}
+%\end{itemize}
+
+One theory of rare variants contribution to extreme longevity is that of many hits that jointly contribute to protective or healthy aging phenotypes.
+
+The hypothesis whether VOI in M116 hit genes associated with longevity specially often was tested. Note that his hypothesis is a rather extreme scenario where M116's VOI tend to concentrate disproportionately more in certain genes than others. Specifically here we tested whether VOI in M116 hit known longevity genes more often than they hit other genes susceptible of having VOI. 
+
+For this test, the enrichment of longevity-associated gene sets (individually and pooled) was evaluated on M116's VOI-harbouring genes for each VOI category taking as reference gene set the compound category-biotype background comprised of rare-variants harbouring autosomal genes of the same biotype (coding genes having or not also non-coding transcripts, and non-coding) that belong into the corresponding VOI category in at least one individual in the compound dataset of M116 and 75 1000G IBS controls).
+
+No significant enrichment was found for this test passing multiple testing correction (FDR). 
+
+Only the broad category \textsc{cadd15} had results passing multiple testing correction (FDR), and they were in the direction of impoverishment. %Results are shown in table. 
+
+The same test in 1000G IBS controls also gave significant impoverishment results similar to those of M116 in the \textsc{cadd15} category. Furthermore, 29 out of the 75 1000GIBS control individuals showed FDR significant enrichment while 75 out of 75 showed FDR significant impoverishment, in some of the longevity gene list. 
+
+ 
+However, a disproportionately high or low representation of longevity genes in the VOI category genes is not necessary or sufficient for M116's longevity genes being specially affected (qualitatively or quantitatively) compared to those of other people. 
+
+% as well as enrichment of many VOI categories in longevity gene sets compared to their category-biotype backgrounds, possibly reflecting an effect of general mild enrichment of the genes most often harbouring VOI in coding functional regions and therefore in annotations.
+
+\FloatBarrier
+\paragraph{Relative longevity enrichment comparing to controls}
+
+
+In order to test whether known longevity-associated genes are relatively more or less hit by VOI in M116 compared to other IBS individuals, we tested the differences in the proportion of longevity genes among the genes harbouring VOI between M116 and the controls. 
+
+For this One Sample Proportion Test (aka. Test of Equal or Given Proportions) was performed for testing the null that the proportions in M116 and the control group are the same.
+
+
+After correcting for multiple testing, no significant differences in the proportion of longevity genes in the category genes were observed between M116 and 1000G IBS controls.
+
+
+
+\FloatBarrier
+\paragraph{Longevity representatives genes}
+\label{sec:theimportant}
+
+
+
+Despite no significant differences in the number or proportion of longevity genes affected by VOI in M116 compared to 1000G IBS controls, the identity and the combination of VOI hit longevity genes is worth noting for future analysis in search of specific causal variants \cite{smulders2024genetics}.
+
+For example, the 8 genes of the sc17 gene set from RVT1 burden test top differentiating genes in European supercentenarian \cite{gierman2014whole} harbour \textsc{altering} variants in M116.
+
+
+In this sense, the lists of overlapping genes from the tables above were generated in order to contrast them with the ``differentiating genes" \autoref{sec:free} and for future inspection of variant-level, for comparison with reported variants.
+
+
+
+
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+\FloatBarrier
+\subsection{Over Representation Analysis of disease genes in genes with VOI}
+\label{sec:funGWAS}
+
+The same analyses as \autoref{sec:funAge} were done with a list of genes associated with genome-wide significant hits in GWAS for ``diseases" or ``syndromes" in European population obtained from the GWAS Catalog \href{https://www.ebi.ac.uk/gwas/docs/file-downloads}{All associations v1.0.2}. 
+
+No differences were found when comparing M116 and 1000G IBS controls in the number of disease genes affected by any category of VOI.
+
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+\FloatBarrier
+\subsection{Over Representation of functional categories in genes with VOI}
+\label{sec:funDB}
+ 
+ 
+Over Representation Analysis (ORA) was performed on general functional annotations from public databases to determine the enrichment of biologically relevant categories in the genes harbouring VOI in the supercentenarian genome (M116). WebgestaltR ORA uses hypergeometric test to calculate p-values of the enrichment of the observed number of genes in a gene set in a category of interest \textit{versus} the expected number of genes in the gene set in a reference background of relevant genes. We used as background the same individual and category specific compound background as in \autoref{sec:funAge}
+
+The R package WebGestaltR \cite{liao2019webgestalt} was used to run the analyses, and various overlapping functional categories from the following databases, both fetched from WebGestaltR package or obtained from \href{https://www.gsea-msigdb.org/gsea/index.jsp}{GSEA} were analysed, including:
+
+\begin{itemize}
+\item[-] functional: Gene Ontogogy (GO) Biological Process, Molecular Function and Cellular Component, Molecular Signatures Database (MSigDB 2023) hallmark genesets (h), ontology genesets (C5 go.bp, go.mf, go.cc), immunologic signature gene sets (C7), cell type signatures (C8)
+\item[-] phenotype: Human Phenotype Ontology (HPO), Molecular Signatures Database (MSigDB 2023) ontology geneset (C5 hpo) 
+\item[-] pathway: KEGG, Reactome and Panther, Molecular Signatures Database (MSigDB 2023) curated gene sets (C2 reactome)
+\item[-] disease: OMIM, GLAD4U and DisGeNET
+\end{itemize}
+
+FDR correction (BH method) was applied within each database, and that FDR was considered for significance without any further correction given the extensive overlap of the databases.
+
+With this, 45 functional categories were significantly over-represented in the VOI genes in at least one VOI category. The list is in the table \href{https://drive.google.com/file/d/15PuvB1HGVSy1P4yNMDFV6C8JXzFF2_wa/view?usp=drive_link}{ORA in VOI genes FDR results all}.
+
+
+The functional categories significantly over-represented per VOI category (FDR $<$ 0.05) were compared to those of the 1000G IBS controls, by counting the proportion of times they showed also their FDR results for the corresponding VOI category. 
+
+Functional categories that appeared in M116 FDR significant results but not in any control (exclusive FDR results) were considered ``specifically" over-represented in M116, and included categories such as Macrophage Activation and Cardiac Septum Morphogenesis (\href{https://drive.google.com/file/d/1iWPxjvhKu3QT5WjEq2NG7K1yRRyqUeRG/view?usp=drive_link}{ORA in VOI genes nominal results all}).
+
+
+The figure \autoref{fig:ORAfdrexcl} and  table \autoref{table:ORAfdrexcl} show the functional categories ``specifically" over-represented in M116 (exclusive FDR significant results of ORA) on genes with VOI (\href{https://drive.google.com/file/d/1iWPxjvhKu3QT5WjEq2NG7K1yRRyqUeRG/view?usp=drive_link}{ORA in VOI genes FDR results exclusive}). 
+
+
+
+\begin{figure}[ht]
+\centering
+        \includegraphics[totalheight=16cm]{ORA_fdr_excl_all_barplot}
+   \caption{ORA results FDR $<$ 0.05, exclusive to M116}
+    \label{fig:ORAfdrexcl}
+\end{figure}
+
+
+
+
+\begin{table}[ht]
+\centering
+ \caption{Exclusive FDR significant functional categories in VOI genes}
+ \begin{tabular}{p{2.5cm} p{5.0cm} p{3.0cm} p{2.5cm} p{1.cm}p{1cm}} 
+  \hline\hline
+Category & Ontology & Gene Set & Enrichment Ratio & p-value & FDR \\ 
+  \hline
+  \textsc{modifier\_cd} & c8.all.v2023.2.Hs.entrez.gmt & Zheng Cord Blood C 5 Similar To Hsc C 6 Putative Altered Metabolic State & 3.61 & 0.00 & 0.02 \\ 
+  \textsc{cadd15} & c5.go.bp.v2023.2.Hs.entrez.gmt & Cardiac Septum Morphogenesis & 3.18 & 0.00 & 0.02 \\ 
+  \textsc{altering} & c5.go.bp.v2023.2.Hs.entrez.gmt & Cardiac Septum Morphogenesis & 3.18 & 0.00 & 0.02 \\ 
+  \textsc{cadd15} & c5.go.bp.v2023.2.Hs.entrez.gmt & Macrophage Activation & 2.98 & 0.00 & 0.03 \\ 
+  \textsc{altering} & c5.go.bp.v2023.2.Hs.entrez.gmt & Macrophage Activation & 2.98 & 0.00 & 0.03 \\ 
+  \textsc{modifier\_cd} & c8.all.v2023.2.Hs.entrez.gmt & Descartes Fetal Liver Hematopoietic Stem Cells & 5.26 & 0.00 & 0.03 \\ 
+  \textsc{modifier\_nc} & c8.all.v2023.2.Hs.entrez.gmt & Fan Embryonic Ctx Big Groups Inhibitory & 8.12 & 0.00 & 0.04 \\ 
+  \textsc{modifier\_cd} & c8.all.v2023.2.Hs.entrez.gmt & Zhong Pfc C 4 Unknown Inp & 2.90 & 0.00 & 0.04 \\ 
+  \textsc{cadd15} & c8.all.v2023.2.Hs.entrez.gmt & Zheng Cord Blood C 5 Similar To Hsc C 6 Putative Altered Metabolic State & 3.13 & 0.00 & 0.04 \\ 
+  \textsc{altering} & c8.all.v2023.2.Hs.entrez.gmt & Zheng Cord Blood C 5 Similar To Hsc C 6 Putative Altered Metabolic State & 3.13 & 0.00 & 0.04 \\ 
+  \textsc{cadd15} & c8.all.v2023.2.Hs.entrez.gmt & Descartes Fetal Liver Hematopoietic Stem Cells & 4.18 & 0.00 & 0.04 \\ 
+  \textsc{altering} & c8.all.v2023.2.Hs.entrez.gmt & Descartes Fetal Liver Hematopoietic Stem Cells & 4.17 & 0.00 & 0.04 \\ 
+   \hline
+\end{tabular}
+ \label{table:ORAfdrexcl}
+\end{table}
+
+
+
+
+At nominal level there were 1369 significant categories in at least one VOI category, out of which 410 were exclusive to M116 results.
+
+
+The figure \autoref{fig:ORAnomexcl} shows the top 100 such functional categories by FDR. The full list of exclusive  and all nominally significant categories are in \href{https://drive.google.com/file/d/1gzF9HsSLx38I7f8VfCGCrHZ8D42H5ptv/view?usp=drive_link}{ORA in VOI genes nominal results exclusive} and \href{https://drive.google.com/file/d/15PuvB1HGVSy1P4yNMDFV6C8JXzFF2_wa/view?usp=drive_link}{ORA in VOI genes nominal results all}.
+
+\begin{figure}[ht]
+\centering
+          \includegraphics[totalheight=22cm]{ORA_nominal_excl_all_barplot}
+   \caption{ORA results p-value $<$ 0.05, exclusive to M116}
+    \label{fig:ORAnomexcl}
+\end{figure}
+
+
+Table  \autoref{table:ORAnomexclex} shows all the exclusive nominally significant results for \textsc{altering} category.
+
+\begin{table}[ht]
+\centering
+ \caption{Exclusive nominally significant functional categories in VOI genes of \textsc{damaging} category}
+ \begin{tabular}{p{8cm} p{4.0cm} p{2.5cm} p{1.cm}p{1cm}} 
+  \hline\hline
+Ontology & Gene Set & Enrichment Ratio & p-value & FDR \\ 
+  \hline
+  disease\_OMIM & Rheumatoid Arthritis & 11.46 & 0.01 & 0.28 \\ 
+ disease\_GLAD4U & Red Cell Aplasia Pure & 17.43 & 0.00 & 0.35 \\ 
+ disease\_GLAD4U & Tumor Virus Infections & 4.36 & 0.00 & 0.35 \\ 
+pathway\_KEGG & Viral Myocarditis & 7.57 & 0.00 & 0.36 \\ 
+ disease\_GLAD4U & Cervical Intraepithelial Neoplasia & 8.71 & 0.00 & 0.42 \\ 
+  disease\_GLAD4U & Papillomavirus Infections & 6.22 & 0.00 & 0.42 \\ 
+ geneontology\_Molecular\_Function\_noRedundant & Clathrin Binding & 5.62 & 0.00 & 0.55 \\ 
+ geneontology\_Molecular\_Function\_noRedundant & Cargo Receptor Activity & 3.64 & 0.01 & 0.55 \\ 
+ disease\_GLAD4U & Severe Cutaneous Adverse Reactions & 10.46 & 0.00 & 0.75 \\ 
+   c5.hpo.v2023.2.Hs.entrez.gmt & Hp Abnormality Of The Tongue & 2.65 & 0.00 & 0.78 \\ 
+ c5.hpo.v2023.2.Hs.entrez.gmt & Hp Recurrent Candida Infections & 13.91 & 0.00 & 0.78 \\ 
+  c5.go.bp.v2023.2.Hs.entrez.gmt & Oligodendrocyte Development & 10.13 & 0.00 & 0.85 \\ 
+ c5.go.bp.v2023.2.Hs.entrez.gmt & Axon Ensheathment In Central Nervous System & 13.30 & 0.00 & 0.85 \\ 
+  c5.go.bp.v2023.2.Hs.entrez.gmt & Vitamin Transport & 7.88 & 0.00 & 0.85 \\ 
+ c5.go.bp.v2023.2.Hs.entrez.gmt & Glial Cell Development & 4.83 & 0.00 & 0.85 \\ 
+  c5.go.bp.v2023.2.Hs.entrez.gmt & Glial Cell Differentiation & 3.32 & 0.00 & 0.85 \\ 
+ c5.go.bp.v2023.2.Hs.entrez.gmt & Detection Of Bacterium & 10.64 & 0.00 & 0.85 \\ 
+   c5.go.bp.v2023.2.Hs.entrez.gmt & Detection Of Other Organism & 10.64 & 0.00 & 0.85 \\ 
+   c5.go.bp.v2023.2.Hs.entrez.gmt & Negative Regulation Of Dna Replication & 10.64 & 0.00 & 0.85 \\ 
+ disease\_GLAD4U & Dog Diseases & 6.34 & 0.00 & 0.92 \\ 
+ c5.go.bp.v2023.2.Hs.entrez.gmt & Dna Templated Dna Replication Maintenance Of Fidelity & 4.25 & 0.00 & 0.94 \\ 
+  c5.go.bp.v2023.2.Hs.entrez.gmt & Amyloid Beta Clearance & 6.45 & 0.00 & 0.94 \\ 
+c5.go.bp.v2023.2.Hs.entrez.gmt & Response To Bacterium & 2.32 & 0.00 & 0.94 \\ 
+  c5.go.bp.v2023.2.Hs.entrez.gmt & Negative Regulation Of Non Canonical Nf Kappab Signal Transduction & 8.86 & 0.00 & 0.95 \\ 
+ c5.go.bp.v2023.2.Hs.entrez.gmt & Antigen Processing And Presentation Of Endogenous Peptide Antigen & 8.86 & 0.00 & 0.95 \\ 
+ c5.go.bp.v2023.2.Hs.entrez.gmt & Detection Of External Biotic Stimulus & 8.86 & 0.00 & 0.95 \\ 
+  c5.go.bp.v2023.2.Hs.entrez.gmt & Macrophage Activation & 4.67 & 0.00 & 0.95 \\ 
+ c5.go.bp.v2023.2.Hs.entrez.gmt & Gliogenesis & 2.69 & 0.00 & 0.95 \\ 
+\hline
+\end{tabular}
+ \label{table:ORAnomexclex}
+\end{table}
+
+
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%--------------------------------------------------------------------------------------------------------------------------------------
+\FloatBarrier
+\section{Hypothesis-free analysis: in search for \texttt{differentiating} genes and gene sets}
+\label{sec:free}
+
+By the longevity hypothesis of rare variants \cite{sebastiani2012whole}\cite{sebastiani2012genetics}\cite{smulders2024genetics}, genes and gene sets enriched in VOI could represent variation associated with the rare phenotype, so here we aim to identify genes with exceptionally high burden of such functional rare variants.
+ 
+In order to characterise and functionally analyse the burden of VOI in M116, and attending to the lack of power to detect associations at variant level, VOI were grouped and analysed with collapsed approaches per genes and gene sets.
+
+The gene-level or gene set -level metrics in M116 (\autoref{sec:metrics}) are then compared with those of the ``control set" in order to evaluate the ``rarity" of M116 genome and identify potentially relevant genes or gene sets in relation to the distinctive phenotype.
+
+Of note, the application of burden tests (and proportion based tests) with just one case severely limits the testing space and statistical power to detect true associations, and on the other hand, lead to an increased risk of generating false positives. In addition to that, the use of external controls can exacerbate the problems due to batch effects. Considering these important limitations, interpretations of results of these tests require extra caution.
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+\FloatBarrier
+\subsection{Variants of interest (VOI), gene-level metrics, distribution}
+\label{sec:metrics}
+
+In the assumption of the rare variants hypothesis, genes (or gene sets) with a different-than-ordinary number of VOI could represent genetic variation associated with the rare phenotype. 
+
+For this, we set to test the difference in VOI gene-level (or gene set level) metrics between M116 and the 1000G IBS controls, in order to identify ``differentiating genes".
+
+
+For these, the following metrics were considered per category for all genes harbouring at least 1 VOI in at least 1 individual of the compound dataset comprised of  M116 and 76 10000G IBS controls.
+
+
+
+\begin{itemize}
+
+\item[] The per-gene number of all rare variants and the number of VOI per category per individual, M116 and 76 1000GIBS controls
+
+\item[] As per its usage in burden tests \autoref{sec:burden}, the compound dataset of M116 and 76 1000GIBS controls was considered to calculate the per-gene grand total number of VOI per category, and the per-individual per-gene proportion to the grand total per category
+
+\item[] Considering the possible batch effects due to the use of external controls as reference, the per-gene metric ``proportion of VOI to all rare variants" per category was also calculated for each individual, which was used in the rank test \autoref{sec:rank}.
+
+\end{itemize}
+
+
+
+The boxplots show the distribution of the per-gene of counts of VOI ( \autoref{fig:boxplots} ) and proportion of VOI to all rare variants (\autoref{fig:boxplots2}) in M116, per category.  
+
+
+
+\begin{figure}[!htb]
+\centering
+     \includegraphics[totalheight=12cm]{boxCOUNT}
+    \caption{Number of VOI in M116 per categories}
+    \label{fig:boxplots}
+\end{figure}
+
+
+
+
+\begin{figure}[!htb]
+\centering
+     \includegraphics[totalheight=12cm]{boxPROP}
+    \caption{Proportion of VOI from all rare variants in M116 per categories}
+    \label{fig:boxplots2}
+\end{figure}
+
+
+
+Most genes VOI harbouring genes have just a 1 or very few VOI in certain categories, making burden test extremely underpowered in most genes.
+
+
+
+
+\FloatBarrier
+\subsection{Burden tests}
+\label{sec:burden}
+
+
+Two classic burden tests were used to compare the ``rarity" of M116 gene and gene-set level metrics compared to 1000GIBS controls, and thus identify ``differentiating" genes and gene sets.
+
+Since these tests do not have statistical power to detect associations passing multiple test correction by the number of genes analysed, when no FDR significant results were obtained, the list of nominally significant (p-value$<$0.05) genes from each analysis (differentiating genes) \autoref{sec:topgenes} was considered for further analysis .
+
+As an additional filter, a one sample proportion test and a rank test were applied and contrasted with the burden tests in order to further focus on a subset of the most replicated results.
+
+% --------------------------------------------------------------------------------------------------------------
+\FloatBarrier
+\subsubsection{Gene level}
+\label{sec:genelevel}
+
+
+\paragraph{Cohort Allelic Sums Test (CAST)}
+\label{sec:cast}
+
+
+Cohort Allelic Sums Test (CAST) assumes that the presence of any rare variants in the target region increases risk and then collapses the individual's genotype information across the rare variants in the region into a genetic score (sum), that is then set to 0 if there is no rare variant present (S$=$0) and set it to 1 if there is at least one rare variant (S$=$1), so that the number of individuals with one or more mutations in the target region is compared between cases and controls (Chi-square or Fisher's exact test).
+
+CAST was performed counting as 1 the presence of a variant in the gene (either 1 or 2 alleles). Also the version for testing compound heterozygous (where S$=$1 if there are at least 2 variations in the target region, S$=$0 otherwise). 
+
+The test did not have power to detect associations passing multiple test correction by the number of genes analysed, so the list of nominally significant (p-value$<$0.05) was further considered. 
+
+The table shows the number of nominally significant genes per VOI category.
+
+\begin{table}[ht]
+\centering
+\caption{Number nominally significant genes in CAST test per VOI category}
+\begin{tabular}{rrrrrr}
+  \hline
+VOI Category & Number of Genes & ENSG\\ 
+  \hline\hline
+  \textsc{damaging} & 157 &  \href{https://drive.google.com/file/d/1K285xLB3Fjva7OQBUxdx8fMDDO6cdGbt/view?usp=drive_link}{damaging\_genes} \\ 
+  \textsc{moderate} & 195 & \href{https://drive.google.com/file/d/1_2pKLNwzlJidSvN24ydfO2obTtvz0JRq/view?usp=drive_link}{moderate\_genes}   \\ 
+  \textsc{modifier\_cd} & 224 & \href{https://drive.google.com/file/d/1H4KcwExpc7Lmn4yN-LPBmGnFSqf89s4N/view?usp=drive_link}{modifier\_cd\_genes} \\ 
+  \textsc{modifier\_nc} & 191 &  \href{https://drive.google.com/file/d/1Y42bT84cMBStLR8EyoqYq6zD9dy_l8LU/view?usp=drive_link}{modifier\_nc\_genes}  \\ 
+  \textsc{altering} & 250 & \href{https://drive.google.com/file/d/1eZXmsy_oRDEyH_3bGSW5ZHBpc9NAGeag/view?usp=drive_link}{altering\_genes}  \\ 
+  \textsc{ncnc\_cadd15} & 272 & \href{https://drive.google.com/file/d/18PdoLU5ZsKb7qwaRtAjEczwV8UDCYIz_/view?usp=drive_link}{ncnc\_cadd15\_genes} \\ 
+  \textsc{cadd15} & 512 & \href{https://drive.google.com/file/d/1T4V3I9xHtpPhxSVo1P0WvQk8TPHL8aTx/view?usp=drive_link}{cadd15\_genes} \\ [1ex]  
+   \hline
+\end{tabular}
+  \label{table:castresults}
+\end{table}
+
+
+
+
+\paragraph{Rare Variant Test}
+\label{sec:rvt}
+
+
+Rare Variant Test (RVT; also called MZ test) is based on a regression framework that tests the accumulation of the minor alleles across rare variants of interest in the target region in two different versions  RVT1) that regresses phenotype on a genetic score defined as the proportion of sites within the gene that harbour VOI, and RVT2) that regresses phenotype on a genetic score defined as the presence of at least one minor allele at any rare variant in the dataset with cases and controls.
+
+
+MZ test was performed on VOI proportions in versions RVT1 (scoring per-gene proportion of VOI to all VOI in dataset) and RVT2 (scoring 1 to presence of VOI at any VOI in the dataset), although RVT1 has better power.
+
+For this, the per-gene a genotype matrix (variant counts) was created including the full dataset of 76 1000G IBS controls and 1 case (M116), for every VOI category and for all rare variants, for every gene with rare variants in at least one individual in the compound dataset.
+
+The test did not have power to detect associations passing multiple test correction by the number of genes analysed, so the list of nominally significant (p-value$<$0.05) was further considered \autoref{table:mztresults}. 
+
+
+\begin{table}[ht]
+\centering
+\caption{Number nominally significant genes in MZ test (RVT1) per VOI category}
+\begin{tabular}{rrrrrr}
+  \hline
+VOI Category & Number of Cenes & ENSG\\ 
+  \hline\hline
+  \textsc{modifier\_cd} & 1 & B4GALT1 \\ 
+  \textsc{altering} & 2  & SCN5A and B4GALT1   \\ 
+  \textsc{cadd15} & 3 & SCN5A, B4GALT1, ENSG00000265400  \\ [1ex]  
+   \hline
+\end{tabular}
+  \label{table:mztresults}
+\end{table}
+
+
+B4GALT1 and  ENSG00000265400 were also in CAST nominally significant results.
+
+
+
+\paragraph{Rank test of proportions}
+\label{sec:rank}
+
+Alternatively, in order to compare relative number of VOI in M116's genes with the control of 1000G IBS women, the rank of M116 metric was calculated per category of VOI for every gene or gene set, and an empirical p-value was determined as the number of 1000GIBS individuals having an equal or higher metric than M116.
+
+Nominally significant results were distributed in as shown in the table
+
+\begin{table}[ht]
+\centering
+\caption{Number nominally significant genes in Rank Test per VOI category}
+\begin{tabular}{rrrrrr}
+  \hline
+VOI Category & Number of Genes (bottom/top)& bottom & top ENSG\\ 
+  \hline\hline
+  
+\textsc{damaging} & 185 (0/185)&  \href{https://drive.google.com/file/d/1pGqutPC8Z9qPUJDKZ9Xp-8sIscbVZUnF/view?usp=drive_link}{damaging\_top\_genes} \\ 
+
+\textsc{moderate} & 137 (0/137)&  \href{https://drive.google.com/file/d/1kSmTElewB8Y9aq0fYGP1e-N-YDEhaYao/view?usp=drive_link}{moderate\_top\_genes} \\ 
+
+\textsc{modifier\_cd} & 166 (0/166)&  \href{https://drive.google.com/file/d/18SOxkcXda6E5LJjh1iaB1oipj6yKUI9V/view?usp=drive_link}{modifier\_cd\_top\_genes} \\ 
+
+\textsc{modifier\_nc} & 139 (0/139)&  \href{https://drive.google.com/file/d/1_jA8Hbq4PLc7sHnTjc0ov56CMRWFjGpR/view?usp=drive_link}{modifier\_nc\_top\_genes} \\ 
+
+ \textsc{altering} & 185 (0/185)&  \href{https://drive.google.com/file/d/1XtR_FlulFUEPlQ7gZM2sExzleatgmVwj/view?usp=drive_link}{altering\_top\_genes} \\ 
+  
+ \textsc{ncnc\_cadd15} & 190 (1/189) & \href{https://drive.google.com/file/d/1F9zlMzQmUC7lHGjhYSy3kOTsqDWosz8Y/view?usp=drive_link}{ncnc\_cadd15\_top\_bottom\_genes}  \\
+  
+ \textsc{cadd15} & 371 (1/370) & \href{https://drive.google.com/file/d/1F9zlMzQmUC7lHGjhYSy3kOTsqDWosz8Y/view?usp=drive_link}{cadd15\_top\_bottom\_genes}    \\  [1ex]  
+  
+   \hline
+\end{tabular}
+  \label{table:rankresults}
+\end{table}
+
+
+
+
+% -----------------------------
+\FloatBarrier
+\subsubsection{\texttt{Differentiating} genes}
+\label{sec:topgenes}
+
+
+In general, the nominally significant results of the burden tests CAST and MZ overlap on over 50\% with those of the Rank Test. 
+
+The Venn diagrams in \autoref{fig:venns} shows the overlap among the nominally significant \href{https://drive.google.com/drive/folders/1QjpixDtIuD4E0Irlpcnw0bBvp1sqkhSA}{results} per VOI category for CAST, MZ RVT1 and Rank test.
+
+
+\begin{figure}[h]
+\centering
+  \includegraphics[totalheight=12cm]{rvaoverlap}
+    \caption{Overlap in methods for differentiating genes with VOI in M116 per VOI category}
+    \label{fig:venns}
+\end{figure}
+
+
+
+The genes that resulted nominally significant in the in at least 2 of the 2 methods (the main burden tests (CAST and MZ) and the Rank Test) were functionally analysed for enrichment in longevity and disease genes \autoref{sec:longrva} and in functional annotations \autoref{sec:funDBrva}. 
+
+
+% --------------------------------------------------------------------------------------------------------------
+
+\FloatBarrier
+\subsubsection{Gene set level}
+\label{sec:genesetlevel}
+
+The CAST and MZ tests were performed at gene set level, i.e. where the target region is a gene set and a score is calculated based on the presence or proportion, respectively, of any VOI variant in any oh the genes in the gene set.
+
+The gene sets test were i) gene sets \autoref{sec:funAge}, individually and jointly, and ii) a list of GWAS hit genes \autoref{sec:funGWAS}.
+
+
+There were no significant results even at nominal level for any of the tested gene lists.
+
+
+
+
+
+%------------------------------
+\FloatBarrier
+\subsection{Representation of longevity genes and disease genes in \texttt{differentiating} genes with VOI}
+\label{sec:longrva}
+ 
+
+The representation of the known longevity/aging genes  \autoref{sec:funAge} and disease genes \autoref{sec:funGWAS} was investigated in the ``differentiating genes" from the nominally significant results in at least 2 out of the 3 methods used for burden tests: the main burden tests (CAST and MZ) and the Rank Test \autoref{sec:burden}.
+
+
+There was no significant over representation of the analysed lists over their base representation in the VOI category genes (Fisher Exact Test).
+
+
+
+
+
+
+
+
+\FloatBarrier
+\subsection{Representation of functional categories in \texttt{differentiating} genes with VOI}
+\label{sec:funDBrva}
+ 
+
+
+ORA for functional annotations in databases was performed in the ``differentiating genes" from the set of nominally significant genes by 2 burden test methods.
+
+
+
+After FDR correction 33 functional categories were significantly enriched in the nominally significant genes compared to the input set of VOI category genes, in at least one VOI category \autoref{table:in2fdrall} (\href{https://drive.google.com/file/d/1O1nLD215x8MEjWG9no1PUEfKxeL-m3G_/view?usp=drive_link}{ORA in burdened genes FDR all}). 
+
+
+\begin{table}[ht]
+\centering
+ \caption{Exclusive FDR significant functional categories in VOI genes (cropped)}
+ \begin{tabular}{p{2.5cm} p{5.0cm} p{3.0cm} p{2.5cm} p{1.cm}p{1cm}} 
+  \hline\hline
+Category & Ontology & Gene Set & Enrichment Ratio & p-value & FDR \\ 
+  \hline
+  \textsc{modifier\_cd} & c5.go.mf.v2023.2.Hs.entrez.gmt & Peptide Antigen Binding & 30.29 & 0.00 & 0.00 \\ 
+  \textsc{modifier\_cd} & pathway\_KEGG & Viral Myocarditis & 15.06 & 0.00 & 0.00 \\ 
+  \textsc{modifier\_cd} & pathway\_KEGG & Allograft Rejection & 24.09 & 0.00 & 0.00 \\ 
+  \textsc{modifier\_cd} & pathway\_KEGG & Autoimmune Thyroid Disease & 22.08 & 0.00 & 0.00 \\ 
+  \textsc{modifier\_cd} & pathway\_KEGG & Graft Versus Host Disease & 22.08 & 0.00 & 0.00 \\ 
+  \textsc{modifier\_cd} & pathway\_KEGG & Type I Diabetes Mellitus & 17.67 & 0.00 & 0.00 \\ 
+  \textsc{modifier\_cd} & c5.go.cc.v2023.2.Hs.entrez.gmt & Mhc Protein Complex & 30.25 & 0.00 & 0.00 \\ 
+  \textsc{modifier\_cd} & c5.go.cc.v2023.2.Hs.entrez.gmt & Lumenal Side Of Endoplasmic Reticulum Membrane & 27.50 & 0.00 & 0.00 \\ 
+  \textsc{cadd15} & pathway\_KEGG & Viral Myocarditis & 15.02 & 0.00 & 0.00 \\ 
+  \textsc{altering} & pathway\_KEGG & Viral Myocarditis & 15.01 & 0.00 & 0.00 \\ 
+  \textsc{modifier\_cd} & c5.go.cc.v2023.2.Hs.entrez.gmt & Er To Golgi Transport Vesicle Membrane & 14.54 & 0.00 & 0.01 \\ 
+  \textsc{modifier\_cd} & c5.go.cc.v2023.2.Hs.entrez.gmt & Lumenal Side Of Membrane & 21.61 & 0.00 & 0.01 \\ 
+  \textsc{altering} & pathway\_KEGG & Graft Versus Host Disease & 19.73 & 0.00 & 0.01 \\ 
+  \textsc{modifier\_cd} & c5.go.mf.v2023.2.Hs.entrez.gmt & Antigen Binding & 16.66 & 0.00 & 0.01 \\ 
+  \textsc{cadd15} & pathway\_KEGG & Graft Versus Host Disease & 18.42 & 0.00 & 0.01 \\ 
+  \textsc{modifier\_cd} & pathway\_KEGG & Antigen Processing And Presentation & 12.05 & 0.00 & 0.01 \\ 
+  \textsc{modifier\_cd} & c5.go.cc.v2023.2.Hs.entrez.gmt & Copii Coated Er To Golgi Transport Vesicle & 10.50 & 0.00 & 0.02 \\ 
+  \textsc{modifier\_nc} & disease\_GLAD4U & Tumor Virus Infections & 9.50 & 0.00 & 0.02 \\ 
+  \textsc{cadd15} & disease\_GLAD4U & Tumor Virus Infections & 7.73 & 0.00 & 0.02 \\ 
+  \textsc{altering} & disease\_GLAD4U & Tumor Virus Infections & 7.67 & 0.00 & 0.02 \\ 
+  \textsc{modifier\_nc} & pathway\_KEGG & Viral Myocarditis & 16.84 & 0.00 & 0.02 \\ 
+  \textsc{modifier\_cd} & pathway\_KEGG & Cell Adhesion Molecules Ca Ms & 5.76 & 0.00 & 0.02 \\ 
+ \textsc{modifier\_nc} & disease\_Disgenet & Hypersensitivity & 28.04 & 0.00 & 0.02 \\ 
+  \textsc{modifier\_cd} & c5.go.cc.v2023.2.Hs.entrez.gmt & Coated Vesicle Membrane & 5.75 & 0.00 & 0.03 \\ 
+  \textsc{damaging} & disease\_GLAD4U & Tumor Virus Infections & 7.76 & 0.00 & 0.03 \\ 
+  \textsc{damaging} & disease\_GLAD4U & Papillomavirus Infections & 12.68 & 0.00 & 0.03 \\ 
+  \textsc{damaging} & disease\_GLAD4U & Cervical Intraepithelial Neoplasia & 17.75 & 0.00 & 0.03 \\ 
+  \textsc{cadd15} & pathway\_KEGG & Antigen Processing And Presentation & 10.63 & 0.00 & 0.04 \\ 
+   \hline
+\end{tabular}
+  \label{table:in2fdrall}
+\end{table}
+
+  %\textsc{cadd15} & pathway\_KEGG & Cell Adhesion Molecules Ca Ms & 5.84 & 0.00 & 0.04 \\ 
+  %\textsc{altering} & pathway\_KEGG & Antigen Processing And Presentation & 10.62 & 0.00 & 0.04 \\ 
+ % \textsc{altering} & pathway\_KEGG & Cell Adhesion Molecules Ca Ms & 5.83 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & c5.go.bp.v2023.2.Hs.entrez.gmt & Antigen Processing And Presentation Of Endogenous Peptide Antigen & 28.14 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & c5.go.bp.v2023.2.Hs.entrez.gmt & Antigen Processing And Presentation Of Endogenous Antigen & 25.59 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_nc} & disease\_OMIM & Human Immunodeficiency Virus Type 1 Susceptibility To & 43.26 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Hepatitis Autoimmune & 20.63 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Tumor Virus Infections & 7.00 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Drug Hypersensitivity & 10.81 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Exanthema & 28.73 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Myelitis & 28.73 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Uveitis & 10.16 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Acquired Immunodeficiency Syndrome & 7.31 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Arthritis Psoriatic & 14.11 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Virological Response & 5.94 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Severe Cutaneous Adverse Reactions & 25.14 & 0.00 & 0.04 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Cytomegalovirus Infections & 13.41 & 0.00 & 0.04 \\ 
+  %\textsc{altering} & pathway\_KEGG & Allograft Rejection & 15.93 & 0.00 & 0.05 \\ 
+  %\textsc{modifier\_cd} & c5.go.bp.v2023.2.Hs.entrez.gmt & Antigen Processing And Presentation Of Peptide Antigen & 14.07 & 0.00 & 0.05 \\ 
+  %\textsc{modifier\_cd} & disease\_GLAD4U & Hypersensitivity & 5.59 & 0.00 & 0.05 \\ 
+ 
+
+At nominal level, 513 functional categories resulted significantly enriched in the ``differentiating genes" in at least one VOI category \href{https://drive.google.com/file/d/1j8sde-jfbkQZd8Ul02ZG4RcDvIHsb_1M/view?usp=drive_link}{ORA in burdened genes nominal all}.
+
+
+The results were compared to those of 1000 resamplings the size of the nominally significant burden test results in the category from the pool of the corresponding VOI category genes in M116. Functional categories enriched specifically in the ``differentiating genes" in M116 true results (exclusive) might represent relevant mechanism underlying differential phenotypes between M116 and controls. Significant functional terms in M116 not appearing in the corresponding results of any of the 1000 resamplings were consider exclusive and included 11 out the 33 FDR significant results and 74 out of the 513 nominally significant results.
+
+
+The bar plots in \autoref{fig:ORAin2excfdr} and \autoref{fig:ORAin2excnominal} show the exclusive functional categories with FDR and nominally significant results of ORA on the nominally significant ``differentiating genes" with VOI from the results replicated by two burden tests.
+
+
+
+\begin{figure}[h]
+\centering
+         \includegraphics[totalheight=16cm]{ORA_fdr_excl_in2_barplot}
+ \caption{ORA FDR significant results p-value $<$ 0.05 in at least 2 test of CAST, MZ and Rank Test(exclusive results to true sample)}
+    \label{fig:ORAin2excfdr}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+         \includegraphics[totalheight=23cm]{ORA_nominal_excl_in2_barplot}
+ \caption{ORA FDR nominally significant results in at least 2 test of CAST, MZ and Rank Test (exclusive results to true sample)}
+    \label{fig:ORAin2excnominal}
+\end{figure}
+
+
+ 
+These functional categories enriched specifically in the ``differentiating genes" in M116 true results (exclusive) might represent relevant mechanism underlying differential phenotypes between M116 and controls.
+
+
+
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------------
+\FloatBarrier
+\section{Some remarks}
+\label{sec:remarks}
+
+The analysis of rare variants in M116 does not point to a single specific known functional gene set or biological mechanism particularly affected, and rather indicate that the potential involvement of rare variants in the extreme longevity phenotype in M116 most probably involves the conjunction of many variants through different cellular processes, or maybe through a common cellular process not yet described.
+
+As a group, M116's likely function-altering variants (variants of interest (VOI) in the text) do not seem to affect a higher proportion of known longevity or disease genes than do the VOI of other female individuals of European Iberic ancestry, neither do the known longevity or disease genes hit by VOI harbour represent a significantly higher proportion of the total of M116's VOI-harbouring genes \autoref{sec:gs}.
+
+Also, the genes in the longevity or disease lists analysed  do not harbour, as a group, a greater number of VOI compared to the bulk of other genes in M116 \autoref{sec:genelevel}. 
+
+Some biological processes are significantly enriched specifically in genes with VOI in M116 and not in VOI-harbouring genes of other 1000G Europeans, including some similar to some previously associated to extreme longevity related to axon, cardiovascular  and immune functions\label{sec:funDB}, reinforcing the role of these functions or of their component genes through other less described/annotated processes, in the extreme longevity phenotype \cite{garagnani2021whole}.
+
+
+
+Individually though, many known longevity genes show suggestive evidence of being affected quantitatively differently by VOI in M116 than in controls. In particular, some resulted nominally significant in gene-level association tests \autoref{sec:burden} being denoted as potentially ``differentiating genes".
+
+These ``differentiating genes", in turn, highlight among others some known functions previously associated with longevity, specially immune function \autoref{sec:immune}, but also neuroprotection \autoref{sec:neuro}.
+
+
+Finally, beyond quantitative significant associations at gene set or gene level determined by the number VOI, qualitative differences in relevant genes, overlooked by collapsed approaches, are also worth looking into, in particular, VOI in genes associated with the main pathways consistently linked to known longevity biological processes or pathways, namely, immune function, insulin/insulin-like growth factor 1 signalling, DNA-damage response and repair, telomere maintenance and cholesterol metabolism \cite{smulders2024genetics}. 
+
+
+
+
+\subsection{Immune genes}
+\label{sec:immune}
+
+Genes harbouring VOI in M116 show a significant enrichment in functions of the Immune System in a specific way, i.e. not found to reach significance level in the corresponding VOI category genes in any of the 1000G IBS controls (ORA \autoref{sec:fun}).
+
+``Macrophage Activation" is among the FDR significant specific results for the \textsc{altering} and \textsc{cadd15} categories, while M116 specific nominal level significant functional categories include also many other Immune System related categories such as  ``T Cell Differentiation In Thymus``, ``T Cell Receptor Binding``, and ``T Cell Mediated Cytotoxicity``, ``Negative Regulation Of Immature T Cell Proliferation``, ``Antigen Processing And Presentation Of Endogenous Peptide Antigen``, ``Antigen Processing And Presentation Of Exogenous Peptide Antigen Via Mhc Class Ii``, ``Antigen Processing And Presentation Of Peptide Antigen Via Mhc Class Ib``, ``Positive Regulation Of Toll Like Receptor 2 Signaling Pathway``, `` to Response To Bacterium``and ``Regulation Of Viral Genome Replication`` and Selective ``Immunoglobulin G Deficiency``, among others.
+
+
+The ``differentiating" genes according to the burden tests'  include many Immune System genes \label{sec:burden}, including Mal, T cell differentiation protein (MAL), leukocyte immunoglobulin like receptor A2 (LILRA2), Interferon induced protein 35 (IFI35), MHC class I polypeptide-related sequence A (MICA), and most notably, HLA genes DR beta 1 and 5 (HLA-DRB1 and HLA-DRB5), key immune regulation factors that have been previously associated with extreme longevity \cite{ivanova1998hla}\cite{lio2003association}\cite{joshi2017genome}\cite{shen2020whole}. However, these latter should be taken with caution since the MHC region is especially hard to type and variation might be underrepresented in 1000G data \cite{brandt2015mapping}.
+
+
+Thus, ``differentiating" genes from burden tests nominally significant results in are specifically enriched in the functions ``Antigen Processing And Presentation`, ``Virological Response`` at FDR significant level, while at nominal level specific significantly enriched categories include also ``Natural Killer Cell Mediated Cytotoxicity``, ``Cytokine Cytokine Receptor Interaction", ``Immunoregulatory Interactions between a Lymphoid and Non Lymphoid Cell" as well as various terms related to specific viral infections such as ``Respiratory Syncytial Virus Infections``, ``Viral Myocarditis``, ``Papillomavirus Infections``  \autoref{sec:funDBrva}.  
+
+
+
+Another top ``differentiating" gene in \textsc{altering} category , CLPTM1, is predicted to be involved in regulation of T cell differentiation in thymus,  and was also reported among the 49 nominally significant differentiating genes in a supercentenarian cohort (sc17 geneset)\cite{gierman2014whole}.
+
+
+Besides the quantitative associations, an interesting finding in the context of immune system is the presence of a \textsc{altering} variant in homozygosity in the gene DSCAML1 \autoref{sec:cd}, since DSCAML1 has been associated with differential DNA methylation patterns associated with altered lymphocyte proportions in in a cohort of long-lived individuals in Costa Rica \cite{mcewen2017differential}.
+
+Likewise, NGFI-A binding protein 2  (NAB2), a transcriptional co-repressor associated with the regulation of CD8+ T cell memory immune responses, was one of the top differentiating genes in a European supercentenarian cohort \cite{gierman2014whole} (gene set sc17), and presents 1\textsc{damaging} variant out of 1 total rare variants in M116. 
+
+
+
+\subsection{Cardiovascular Health}
+
+Although not in the list of clear longevity associated processes \cite{smulders2024genetics}, cardiovascular health function has been associated to longevity and extreme longevity. For example, in a study of supercentenarian, several cardiovascular health related functional categories were overrepresented among the differentiating variation, including ``Regulation of Heart Contraction`` , ``Dilated Cardiomyopathy`` or ``Cardiac Muscle Contraction``, and ``Hypertrophic Cardiomyopathy``\cite{garagnani2021whole}.
+
+VOI genes in M116 show specific significant enrichment in many cardiovascular health terms, including ``Cardiac Septum Morphogenesis`` at FDR significant level and ``Atrial Septum Morphogenesis``, ``Myocardial Fibrosis``, ``Cardiac Dysrhythmia Nos``, ``Cardiac Output Low``,  ``Cardiomyopathy Dilated`` at nominal level \autoref{sec:funDB}, while the she set of ``differentiating genes" showed a specific enrichment of the category ``Viral Myocarditis" at nominally significant level.
+
+In the context of cardiovascular health is also noteworthy that among the VOI found in homozygosity is Novel Transcript, Antisense To PCDHA9, that has been associated to heart and blood pressure.
+
+
+\subsection{Neuro-function/protection}
+\label{sec:neuro}
+
+ The set of` `differentiating genes" showed a specific nominally significant enrichment of the categories ``Axon Ensheathment In Central Nervous System``, ``Amyloid Beta Clearance``, ``Neuroinflammatory Response` and``Apoptotic Process``.
+
+The CADPS family members CADPS1, affected by homozygous \textsc{altering} variant chr3\_62414973\_G\_A, and the CADPS2, \textsc{modifier\_nc} `differentiating gene", have been associated with neuroprotection \cite{aenlle2010aging}\cite{obergasteiger2017cadps2}.
+
+
+
+
+\subsection{Mitochondrial}
+\label{sec:mito}
+
+*Mitochondrial variants were not classified in any VOI categories since the full set pathogenicity annotations was not available.
+
+One mitochondrial rare variant was consistently found in M116's samples and her daughter's: missense coding variant 13762 T–G in gene ND5, a component of the mitochondrial oxidative phosphorylation (OXPHOS) machinery of which variations have been associated with resting metabolic rate (RMR) and total energy expenditure (TEE) with possible implications in functional decline, disease risk and aging \cite{greaves2009mitochondrial}\cite{ma2020mitochondria}.
+
+Likewise, MT-CO1 (COX1), a longevity gene (in longevity gene lists) associated with extreme female longevity \cite{li2015mitochondrial}, presents one rare variant (upstream\_gene\_variant, IMPACT MODIFIER) in M116.
+
+Autosomal genes associated with mitochondrial function were found nominally significant in burden tests, including MRPS9, MTCH2 and MTG2
+
+The mitochondrial function categories `Mitochondrial Encephalomyopathies``, ``Protein Import Into Mitochondrial Matrix`` were specifically enriched in M116's VOI genes at nominally significant level.
+
+
+
+\subsection{DNA repair, telomere length}
+\label{sec:dna}
+
+The VOI genes in M116. show a specific nominally significant enrichment in DNA replication related categories ``Negative Regulation Of Dna Replication``, ``Dna Templated Dna Replication Maintenance Of Fidelity``, ``Negative Regulation Of Dna Binding``and ``Dna Strand Elongation``.
+
+Notably, among the``differentiating genes" in \textsc{damaging} VOI category is circadian protein TIMELESS, involved in cell survival after damage or stress, increase in DNA polymerase epsilon activity and maintenance of telomere length.
+
+
+
+
+\subsection{Cholesterol metabolism}
+\label{sec:col}
+
+
+
+``Cholesterol Metabolism``, ``Lipoprotein Metabolic Process``, ``Lipoprotein Particle Receptor Binding`` and ``Hallmark Pancreas Beta Cells`` are among the specific nominally significant categories in `differentiating genes`` harbouring VOI in M116, with representatives including LDL receptor related protein 1 (LRP1) and LRP2.
+
+
+\subsection{Insulin/insulin-like growth factor 1 signalling}
+\label{sec:insulin}
+
+``Negative Regulation Of Insulin Like Growth Factor Receptor Signaling Pathway`` appears among the nominally significant M116-specific enriched functional categories, represented by \textsc{altering} VOI harbouring genes CILP, IGFBP5 and INPPL1.
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------------
+
+\section{Limitations}
+\label{sec:lim}
+
+
+The sample size of 1 is very limiting because of lack of power for any statistical test. An approach to ameliorating this would be to jointly analyse M116 with other supercentenarian for which WGS data is available,  like \cite{michailidou2018meta} and  \href{https://www.betterhumans.org/}{Betterhumans}. Meanwhile, results are interpreted in relation to previous knowledge and other available data.
+
+Another important limitation of this analyses is the use of external controls that can result in spurious signals due to batch effect, which we have not addressed.
+
+
+
+
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------------
+
+\section{Supplementary material}
+
+
+
+The genes and all these gene-level metrics for all rare variants analysed (shared by at least two M116 samples) can be found in \href{https://drive.google.com/drive/folders/1vMgDf7vy4qlt-jgrHt40MUfd4tibz8X5}{Gene matrices}.
+
+The control data was downloaded from 1000G VCF set \href{https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/}{20201028\_3202\_phased}.
+
+
+%https://drive.google.com/drive/folders/1vMgDf7vy4qlt-jgrHt40MUfd4tibz8X5
+%the GitHub repository \href{https://github.com/clauw87/supercentenarian/tree/38938eac3af3998ea46c11e13a477ea336ca2533/genevarlists}{https://github.com/clauw87/supercentenarian/tree/main/genevarlists}.
+
+
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+
+
+
+%--------------------------------------------------------------------------------------------------------------------------------------
+%\section{Softwares, Versions}
+
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+%%%%------------------------%%%%------------------------%%%%------------------------%%%%------------------------
+
+
+%--------------------------------------------------------------------------------------------------------------------------------------
+
+
+\bibliography{supercentenarian_refs.bib}
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+%\paragraph{One-sample proportion Test}
+%\label{sec:prop}
+%In order to compare the relative number of VOI in M116's genes compare to that of the control of 1000G IBS women, a test of equal proportions was run per category for every gene or gene set.
+%After FDR correction, 36 genes were significant, out of which 26 are common with the CAST nominal results, and 235 genes were nominally significant, out of which 129 were common to the CAST nominal results, and one with MZ.
+% This is not really correct because in order to apply this n*p and n(*1-p) should be bigger than 5 and with sample
+\paragraph{Rank test of proportions}
+\label{sec:rank}
+Alternatively, in order to compare relative number of VOI in M116's genes the control of 1000G IBS women, the rank of M116 metric was calculated per category of VOI for every gene or gene set, and an empirical p-value was determined as the number of 1000GIBS individuals having an equal or higher metric than M116.
+Nominally significant results were distributed in: 
+\textsc{altering}: 185 (all top, (out of which 125 overlap with the corresponding CAST nominally significant results
+ \textsc{ncnc\_cadd15}: 190 (189 top, 1 bottom, out of which 171 (all top), overlap with the corresponding CAST nominally significant results
+% 129 top 1 bottom in \textsc{damaging}, 155 top 1 bottom in \textsc{moderate}, 164 top 3 bottom in \textsc{modifier\_cd}, 140  top 2 bottom in \textsc{modifier\_nc}
+
+
+%Bottom
+%ENSG00000239265	CLRN1 antisense RNA 1	CLRN1-AS1		
+%ENSG00000169118	casein kinase 1 gamma 1	CSNK1G1	CK1gamma1	HGNC:2454
+%ENSG00000213931	hemoglobin subunit epsilon 1	HBE1	HBE	HGNC:4830
+%ENSG00000196565	hemoglobin subunit gamma 2	HBG2	HBG-T1, TNCY	HGNC:4832
+%ENSG00000276975	HYDIN axonemal central pair apparatus protein 2 (pseudogene)	HYDIN2		
+%ENSG00000167355	olfactory receptor family 51 subfamily B member 5	OR51B5	HOR5'Beta5, OR11-37	HGNC:19599
+
+
+
+
+
+
+
+
+

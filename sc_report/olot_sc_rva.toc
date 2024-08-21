@@ -1,0 +1,42 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Summary}{2}{section.1}% 
+\contentsline {section}{\numberline {2}Introduction}{2}{section.2}% 
+\contentsline {section}{\numberline {3}Data}{3}{section.3}% 
+\contentsline {section}{\numberline {4}Annotation}{3}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}VEP annotation}{3}{subsection.4.1}% 
+\contentsline {section}{\numberline {5}Variants of interest (VOI)}{3}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Rare variants}{4}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Categories of variants' impact: Variants of Interest (VOI)}{4}{subsection.5.2}% 
+\contentsline {section}{\numberline {6}VOI in homozygosity}{7}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Homozygous VOI in Protein-coding Genes - \textsc {altering}}{7}{subsection.6.1}% 
+\contentsline {subsection}{\numberline {6.2}Homozygous VOI in Non-coding Genes - \textsc {ncnc\_cadd15}}{7}{subsection.6.2}% 
+\contentsline {section}{\numberline {7}Functional Analysis of genes with VOI}{8}{section.7}% 
+\contentsline {paragraph}{\numberline {7.0.0.1}Longevity representatives genes}{8}{paragraph.7.0.0.1}% 
+\contentsline {subsection}{\numberline {7.1}Over Representation Analysis of Aging/ Longevity/ Extreme longevity genes in genes with VOI}{8}{subsection.7.1}% 
+\contentsline {paragraph}{\numberline {7.1.0.1}Number of hit longevity genes}{8}{paragraph.7.1.0.1}% 
+\contentsline {paragraph}{\numberline {7.1.0.2}Longevity enrichment - or bias towards longevity variation}{9}{paragraph.7.1.0.2}% 
+\contentsline {paragraph}{\numberline {7.1.0.3}Relative longevity enrichment comparing to controls}{10}{paragraph.7.1.0.3}% 
+\contentsline {paragraph}{\numberline {7.1.0.4}Longevity representatives genes}{10}{paragraph.7.1.0.4}% 
+\contentsline {subsection}{\numberline {7.2}Over Representation Analysis of disease genes in genes with VOI}{10}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}Over Representation of functional categories in genes with VOI}{10}{subsection.7.3}% 
+\contentsline {section}{\numberline {8}Hypothesis-free analysis: in search for \texttt {differentiating} genes and gene sets}{16}{section.8}% 
+\contentsline {subsection}{\numberline {8.1}Variants of interest (VOI), gene-level metrics, distribution}{16}{subsection.8.1}% 
+\contentsline {subsection}{\numberline {8.2}Burden tests}{19}{subsection.8.2}% 
+\contentsline {subsubsection}{\numberline {8.2.1}Gene level}{19}{subsubsection.8.2.1}% 
+\contentsline {paragraph}{\numberline {8.2.1.1}Cohort Allelic Sums Test (CAST)}{19}{paragraph.8.2.1.1}% 
+\contentsline {paragraph}{\numberline {8.2.1.2}Rare Variant Test}{19}{paragraph.8.2.1.2}% 
+\contentsline {paragraph}{\numberline {8.2.1.3}Rank test of proportions}{20}{paragraph.8.2.1.3}% 
+\contentsline {subsubsection}{\numberline {8.2.2}\texttt {Differentiating} genes}{20}{subsubsection.8.2.2}% 
+\contentsline {subsubsection}{\numberline {8.2.3}Gene set level}{21}{subsubsection.8.2.3}% 
+\contentsline {subsection}{\numberline {8.3}Representation of longevity genes and disease genes in \texttt {differentiating} genes with VOI}{21}{subsection.8.3}% 
+\contentsline {subsection}{\numberline {8.4}Representation of functional categories in \texttt {differentiating} genes with VOI}{22}{subsection.8.4}% 
+\contentsline {section}{\numberline {9}Some remarks}{26}{section.9}% 
+\contentsline {subsection}{\numberline {9.1}Immune genes}{26}{subsection.9.1}% 
+\contentsline {subsection}{\numberline {9.2}Cardiovascular Health}{27}{subsection.9.2}% 
+\contentsline {subsection}{\numberline {9.3}Neuro-function/protection}{27}{subsection.9.3}% 
+\contentsline {subsection}{\numberline {9.4}Mitochondrial}{27}{subsection.9.4}% 
+\contentsline {subsection}{\numberline {9.5}DNA repair, telomere length}{28}{subsection.9.5}% 
+\contentsline {subsection}{\numberline {9.6}Cholesterol metabolism}{28}{subsection.9.6}% 
+\contentsline {subsection}{\numberline {9.7}Insulin/insulin-like growth factor 1 signalling}{28}{subsection.9.7}% 
+\contentsline {section}{\numberline {10}Limitations}{28}{section.10}% 
+\contentsline {section}{\numberline {11}Supplementary material}{28}{section.11}% 

@@ -1,0 +1,33 @@
+\BOOKMARK [1][-]{section.1}{Summary}{}% 1
+\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.3}{Data}{}% 3
+\BOOKMARK [1][-]{section.4}{Annotation}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{VEP annotation}{section.4}% 5
+\BOOKMARK [1][-]{section.5}{Variants of interest \(VOI\)}{}% 6
+\BOOKMARK [2][-]{subsection.5.1}{Rare variants}{section.5}% 7
+\BOOKMARK [2][-]{subsection.5.2}{Categories of variants' impact: Variants of Interest \(VOI\)}{section.5}% 8
+\BOOKMARK [1][-]{section.6}{Functional Analysis of genes with VOI}{}% 9
+\BOOKMARK [2][-]{subsection.6.1}{Over Representation Analysis of Aging/ Longevity/ Extreme longevity genes in genes with VOI}{section.6}% 10
+\BOOKMARK [2][-]{subsection.6.2}{Over Representation Analysis of disease genes in genes with VOI}{section.6}% 11
+\BOOKMARK [2][-]{subsection.6.3}{Over Representation of functional categories in genes with VOI}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.4}{Variants of interest \(VOI\), gene-level metrics, distribution}{section.6}% 13
+\BOOKMARK [1][-]{section.7}{VOI in homozygosity}{}% 14
+\BOOKMARK [2][-]{subsection.7.1}{Homozygous VOI in Protein-coding Genes - altering}{section.7}% 15
+\BOOKMARK [2][-]{subsection.7.2}{Homozygous VOI in Non-coding Genes - ncnc\137cadd15}{section.7}% 16
+\BOOKMARK [1][-]{section.8}{Hypothesis-free analysis: in search for differentiating genes and gene sets}{}% 17
+\BOOKMARK [2][-]{subsection.8.2}{Burden tests}{section.8}% 18
+\BOOKMARK [3][-]{subsubsection.8.2.1}{Gene level}{subsection.8.2}% 19
+\BOOKMARK [3][-]{subsubsection.8.2.2}{Differentiating genes}{subsection.8.2}% 20
+\BOOKMARK [3][-]{subsubsection.8.2.3}{Gene set level}{subsection.8.2}% 21
+\BOOKMARK [2][-]{subsection.8.3}{Representation of longevity genes and disease genes in differentiating genes with VOI}{section.8}% 22
+\BOOKMARK [2][-]{subsection.8.4}{Representation of functional categories in differentiating genes with VOI}{section.8}% 23
+\BOOKMARK [1][-]{section.9}{Some remarks}{}% 24
+\BOOKMARK [2][-]{subsection.9.1}{Immune genes}{section.9}% 25
+\BOOKMARK [2][-]{subsection.9.2}{Cardiovascular Health}{section.9}% 26
+\BOOKMARK [2][-]{subsection.9.3}{Neuro-function/protection}{section.9}% 27
+\BOOKMARK [2][-]{subsection.9.4}{Mitochondrial}{section.9}% 28
+\BOOKMARK [2][-]{subsection.9.5}{DNA repair, telomere length}{section.9}% 29
+\BOOKMARK [2][-]{subsection.9.6}{Cholesterol metabolism}{section.9}% 30
+\BOOKMARK [2][-]{subsection.9.7}{Insulin/insulin-like growth factor 1 signalling}{section.9}% 31
+\BOOKMARK [1][-]{section.10}{Limitations}{}% 32
+\BOOKMARK [1][-]{section.11}{Supplementary material}{}% 33

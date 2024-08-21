@@ -1,0 +1,212 @@
+\begin{thebibliography}{10}
+
+\bibitem{smulders2024genetics}
+Larissa Smulders and Joris Deelen.
+\newblock Genetics of human longevity: From variants to genes to pathways.
+\newblock {\em Journal of Internal Medicine}, 295(4):416--435, 2024.
+
+\bibitem{sebastiani2012genetics}
+Paola Sebastiani and Thomas~T Perls.
+\newblock The genetics of extreme longevity: lessons from the new england
+  centenarian study.
+\newblock {\em Frontiers in genetics}, 3:277, 2012.
+
+\bibitem{beekman2010genome}
+Marian Beekman, Christa Nederstigt, H~Eka~D Suchiman, Dennis Kremer, Ruud
+  van~der Breggen, Nico Lakenberg, Wendimagegn~Ghidey Alemayehu, Anton~JM
+  de~Craen, Rudi~GJ Westendorp, Dorret~I Boomsma, et~al.
+\newblock Genome-wide association study (gwas)-identified disease risk alleles
+  do not compromise human longevity.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  107(42):18046--18049, 2010.
+
+\bibitem{nygaard2019whole}
+Haakon~B Nygaard, E~Zeynep Erson-Omay, Xiujuan Wu, Brianne~A Kent, Cecily~Q
+  Bernales, Daniel~M Evans, Matthew~J Farrer, Carles Vilari{\~n}o-G{\"u}ell,
+  and Stephen~M Strittmatter.
+\newblock Whole-exome sequencing of an exceptional longevity cohort.
+\newblock {\em The Journals of Gerontology: Series A}, 74(9):1386--1390, 2019.
+
+\bibitem{sebastiani2012whole}
+Paola Sebastiani, Alberto Riva, Monty Montano, Phillip Pham, Ali Torkamani,
+  Eugene Scherba, Gary Benson, Jacqueline~N Milton, Clinton~T Baldwin, Stacy
+  Andersen, et~al.
+\newblock Whole genome sequences of a male and female supercentenarian, ages
+  greater than 114 years.
+\newblock {\em Frontiers in genetics}, 2:90, 2012.
+
+\bibitem{dato2019untangling}
+Serena Dato, Mette Soerensen, and Giuseppina Rose.
+\newblock Untangling the genetics of human longevity—a challenging quest,
+  2019.
+
+\bibitem{gierman2014whole}
+Hinco~J Gierman, Kristen Fortney, Jared~C Roach, Natalie~S Coles, Hong Li,
+  Gustavo Glusman, Glenn~J Markov, Justin~D Smith, Leroy Hood, L~Stephen Coles,
+  et~al.
+\newblock Whole-genome sequencing of the world’s oldest people.
+\newblock {\em PloS one}, 9(11):e112430, 2014.
+
+\bibitem{druley2016candidate}
+Todd~E Druley, Lihua Wang, Shiow~J Lin, Joseph~H Lee, Qunyuan Zhang, E~Warwick
+  Daw, Haley~J Abel, Sara~E Chasnoff, Enrique~I Ramos, Benjamin~T Levinson,
+  et~al.
+\newblock Candidate gene resequencing to identify rare, pedigree-specific
+  variants influencing healthy aging phenotypes in the long life family study.
+\newblock {\em BMC geriatrics}, 16:1--12, 2016.
+
+\bibitem{byrska2022high}
+Marta Byrska-Bishop, Uday~S Evani, Xuefang Zhao, Anna~O Basile, Haley~J Abel,
+  Allison~A Regier, Andr{\'e} Corvelo, Wayne~E Clarke, Rajeeva Musunuri,
+  Kshithija Nagulapalli, et~al.
+\newblock High-coverage whole-genome sequencing of the expanded 1000 genomes
+  project cohort including 602 trios.
+\newblock {\em Cell}, 185(18):3426--3440, 2022.
+
+\bibitem{mckenna2010genome}
+Aaron McKenna, Matthew Hanna, Eric Banks, Andrey Sivachenko, Kristian
+  Cibulskis, Andrew Kernytsky, Kiran Garimella, David Altshuler, Stacey
+  Gabriel, Mark Daly, et~al.
+\newblock The genome analysis toolkit: a mapreduce framework for analyzing
+  next-generation dna sequencing data.
+\newblock {\em Genome research}, 20(9):1297--1303, 2010.
+
+\bibitem{mclaren2016ensembl}
+William McLaren, Laurent Gil, Sarah~E Hunt, Harpreet~Singh Riat, Graham~RS
+  Ritchie, Anja Thormann, Paul Flicek, and Fiona Cunningham.
+\newblock The ensembl variant effect predictor.
+\newblock {\em Genome biology}, 17:1--14, 2016.
+
+\bibitem{koch2020exploring}
+Linda Koch.
+\newblock Exploring human genomic diversity with gnomad.
+\newblock {\em Nature Reviews Genetics}, 21(8):448--448, 2020.
+
+\bibitem{adzhubei2010method}
+Ivan~A Adzhubei, Steffen Schmidt, Leonid Peshkin, Vasily~E Ramensky, Anna
+  Gerasimova, Peer Bork, Alexey~S Kondrashov, and Shamil~R Sunyaev.
+\newblock A method and server for predicting damaging missense mutations.
+\newblock {\em Nature methods}, 7(4):248--249, 2010.
+
+\bibitem{adzhubei2013predicting}
+Ivan Adzhubei, Daniel~M Jordan, and Shamil~R Sunyaev.
+\newblock Predicting functional effect of human missense mutations using
+  polyphen-2.
+\newblock {\em Current protocols in human genetics}, 76(1):7--20, 2013.
+
+\bibitem{ng2003sift}
+Pauline~C Ng and Steven Henikoff.
+\newblock Sift: Predicting amino acid changes that affect protein function.
+\newblock {\em Nucleic acids research}, 31(13):3812--3814, 2003.
+
+\bibitem{rentzsch2019cadd}
+Philipp Rentzsch, Daniela Witten, Gregory~M Cooper, Jay Shendure, and Martin
+  Kircher.
+\newblock Cadd: predicting the deleteriousness of variants throughout the human
+  genome.
+\newblock {\em Nucleic acids research}, 47(D1):D886--D894, 2019.
+
+\bibitem{drost2017biomartr}
+Hajk-Georg Drost and Jerzy Paszkowski.
+\newblock Biomartr: genomic data retrieval with r.
+\newblock {\em Bioinformatics}, 33(8):1216--1217, 2017.
+
+\bibitem{liao2019webgestalt}
+Yuxing Liao, Jing Wang, Eric~J Jaehnig, Zhiao Shi, and Bing Zhang.
+\newblock Webgestalt 2019: gene set analysis toolkit with revamped uis and
+  apis.
+\newblock {\em Nucleic acids research}, 47(W1):W199--W205, 2019.
+
+\bibitem{garagnani2021whole}
+Paolo Garagnani, Julien Marquis, Massimo Delledonne, Chiara Pirazzini, Elena
+  Marasco, Katarzyna~Malgorzata Kwiatkowska, Vincenzo Iannuzzi, Maria~Giulia
+  Bacalini, Armand Valsesia, Jerome Carayol, et~al.
+\newblock Whole-genome sequencing analysis of semi-supercentenarians.
+\newblock {\em Elife}, 10:e57849, 2021.
+
+\bibitem{ivanova1998hla}
+Rayna Ivanova, Nicolas H{\'e}non, Virginia Lepage, Dominique Charron, Eric
+  Vicaut, and Fran{\c{c}}ois Sch{\"a}chter.
+\newblock Hla-dr alleles display sex-dependent effects on survival and
+  discriminate between individual and familial longevity.
+\newblock {\em Human Molecular Genetics}, 7(2):187--194, 1998.
+
+\bibitem{lio2003association}
+Domenico Lio, Giovanni~Mario Pes, Ciriaco Carru, Florinda List{\i}, Viviana
+  Ferlazzo, Giuseppina Candore, Giuseppina Colonna-Romano, Luigi Ferrucci, Luca
+  Deiana, Giovannella Baggio, et~al.
+\newblock Association between the hla-dr alleles and longevity: a study in
+  sardinian population.
+\newblock {\em Experimental gerontology}, 38(3):313--318, 2003.
+
+\bibitem{joshi2017genome}
+Peter~K Joshi, Nicola Pirastu, Katherine~A Kentistou, Krista Fischer, Edith
+  Hofer, Katharina~E Schraut, David~W Clark, Teresa Nutile, Catriona~LK Barnes,
+  Paul~RHJ Timmers, et~al.
+\newblock Genome-wide meta-analysis associates hla-dqa1/drb1 and lpa and
+  lifestyle factors with human longevity.
+\newblock {\em Nature communications}, 8(1):910, 2017.
+
+\bibitem{shen2020whole}
+Shuhua Shen, Chao Li, Luwei Xiao, Xiaoming Wang, Hang Lv, Yuan Shi, Yixue Li,
+  and Qi~Huang.
+\newblock Whole-genome sequencing of chinese centenarians reveals important
+  genetic variants in aging wgs of centenarian for genetic analysis of aging.
+\newblock {\em Human Genomics}, 14:1--7, 2020.
+
+\bibitem{brandt2015mapping}
+D{\'e}bora~YC Brandt, Vitor~RC Aguiar, B{\'a}rbara~D Bitarello, Kelly Nunes,
+  J{\'e}r{\^o}me Goudet, and Diogo Meyer.
+\newblock Mapping bias overestimates reference allele frequencies at the hla
+  genes in the 1000 genomes project phase i data.
+\newblock {\em G3: Genes, Genomes, Genetics}, 5(5):931--941, 2015.
+
+\bibitem{mcewen2017differential}
+Lisa~M McEwen, Alexander~M Morin, Rachel~D Edgar, Julia~L MacIsaac, Meaghan~J
+  Jones, William~H Dow, Luis Rosero-Bixby, Michael~S Kobor, and David~H
+  Rehkopf.
+\newblock Differential dna methylation and lymphocyte proportions in a costa
+  rican high longevity region.
+\newblock {\em Epigenetics \& Chromatin}, 10:1--14, 2017.
+
+\bibitem{aenlle2010aging}
+Kristina~K Aenlle and Thomas~C Foster.
+\newblock Aging alters the expression of genes for neuroprotection and synaptic
+  function following acute estradiol treatment.
+\newblock {\em Hippocampus}, 20(9):1047--1060, 2010.
+
+\bibitem{obergasteiger2017cadps2}
+Julia Obergasteiger, Christa {\"U}berbacher, Peter~P Pramstaller, Andrew~A
+  Hicks, Corrado Corti, and Mattia Volta.
+\newblock Cadps2 gene expression is oppositely regulated by lrrk2 and
+  alpha-synuclein.
+\newblock {\em Biochemical and biophysical research communications},
+  490(3):876--881, 2017.
+
+\bibitem{greaves2009mitochondrial}
+Laura~C Greaves and Doug~M Turnbull.
+\newblock Mitochondrial dna mutations and ageing.
+\newblock {\em Biochimica et Biophysica Acta (BBA)-General Subjects},
+  1790(10):1015--1020, 2009.
+
+\bibitem{ma2020mitochondria}
+Jinzhao Ma, Qiwei Chen, Shuxian Wang, Rujun Ma, Jun Jing, Yang Yang, Yuming
+  Feng, Zhichuan Zou, Yu~Zhang, Xie Ge, et~al.
+\newblock Mitochondria-related mir-574 reduces sperm atp by targeting nd5 in
+  aging males.
+\newblock {\em Aging (Albany NY)}, 12(9):8321, 2020.
+
+\bibitem{li2015mitochondrial}
+Lei Li, Hong-Xiang Zheng, Zuyun Liu, Zhendong Qin, Fei Chen, Degui Qian, Jun
+  Xu, Li~Jin, and Xiaofeng Wang.
+\newblock Mitochondrial genomes and exceptional longevity in a chinese
+  population: the rugao longevity study.
+\newblock {\em Age}, 37:1--10, 2015.
+
+\bibitem{michailidou2018meta}
+Kyriaki Michailidou.
+\newblock Meta-analysis of common and rare variants.
+\newblock {\em Genetic Epidemiology: Methods and Protocols}, pages 73--88,
+  2018.
+
+\end{thebibliography}

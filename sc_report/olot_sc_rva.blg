@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: olot_sc_rva.aux
+The style file: unsrt.bst
+Database file #1: supercentenarian_refs.bib
+You've used 31 entries,
+            1791 wiz_defined-function locations,
+            657 strings with 11869 characters,
+and the built_in function-call counts, 9058 in all, are:
+= -- 696
+> -- 687
+< -- 1
++ -- 240
+- -- 209
+* -- 833
+:= -- 1565
+add.period$ -- 92
+call.type$ -- 31
+change.case$ -- 31
+chr.to.int$ -- 0
+cite$ -- 31
+duplicate$ -- 282
+empty$ -- 719
+format.name$ -- 209
+if$ -- 1854
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 30
+newline$ -- 157
+num.names$ -- 31
+pop$ -- 39
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 108
+stack$ -- 0
+substring$ -- 683
+swap$ -- 38
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 86
+width$ -- 33
+write$ -- 340
